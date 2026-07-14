@@ -111,15 +111,12 @@ export default async function RootLayout({
         <style dangerouslySetInnerHTML={{
           __html: `
             :root {
-              --color-pe-navy: ${settings.primaryNavy || "#002B5C"};
-              --color-pe-navy-dark: ${settings.primaryNavy ? settings.primaryNavy + "d9" : "#001A3A"};
-              --color-pe-orange: ${settings.accentOrange || "#29ABE2"};
-              --color-pe-orange-dark: ${settings.accentOrange ? settings.accentOrange + "d9" : "#1A8CBD"};
-              --color-pe-orange-light: ${settings.accentOrange ? settings.accentOrange + "1a" : "#E8F7FD"};
-              /* Logo brand cyan — always fixed to logo colour */
-              --color-pe-cyan: #29ABE2;
-              --color-pe-cyan-dark: #1A8CBD;
-              --color-pe-cyan-light: #E8F7FD;
+              --color-pe-navy-custom: ${settings.primaryNavy || "#002B5C"};
+              --color-pe-navy-dark-custom: ${settings.primaryNavy ? settings.primaryNavy + "d9" : "#001A3A"};
+              --color-pe-navy-mid-custom: ${settings.primaryNavy ? settings.primaryNavy + "b3" : "#0D3572"};
+              --color-pe-orange-custom: ${settings.accentOrange || "#29ABE2"};
+              --color-pe-orange-dark-custom: ${settings.accentOrange ? settings.accentOrange + "d9" : "#1A8CBD"};
+              --color-pe-orange-light-custom: ${settings.accentOrange ? settings.accentOrange + "1a" : "#E8F7FD"};
             }
           `
         }} />

@@ -7,9 +7,9 @@
 
 @theme inline {
   /* ── Pylon Energy Brand Colours (matched to logo) ── */
-  --color-pe-navy: #002B5C;
-  --color-pe-navy-dark: #001A3A;
-  --color-pe-navy-mid: #0D3572;
+  --color-pe-navy: var(--color-pe-navy-custom, #002B5C);
+  --color-pe-navy-dark: var(--color-pe-navy-dark-custom, #001A3A);
+  --color-pe-navy-mid: var(--color-pe-navy-mid-custom, #0D3572);
   /* Electric cyan — exact colour of "ENERGY" wordmark in logo */
   --color-pe-cyan: #29ABE2;
   --color-pe-cyan-dark: #1A8CBD;
@@ -20,9 +20,9 @@
   --color-pe-blue-light: #E8F4FD;
   --color-pe-blue-50: #EFF6FF;
   /* CTA orange is now matched to electric cyan from the logo */
-  --color-pe-orange: #29ABE2;
-  --color-pe-orange-dark: #1A8CBD;
-  --color-pe-orange-light: #E8F7FD;
+  --color-pe-orange: var(--color-pe-orange-custom, #29ABE2);
+  --color-pe-orange-dark: var(--color-pe-orange-dark-custom, #1A8CBD);
+  --color-pe-orange-light: var(--color-pe-orange-light-custom, #E8F7FD);
   --color-pe-white: #FFFFFF;
   --color-pe-green: #16A34A;
   --color-pe-green-light: #DCFCE7;
