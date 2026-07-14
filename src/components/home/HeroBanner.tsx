@@ -104,7 +104,7 @@ export default function HeroBanner() {
   return (
     <section
       id="hero"
-      className="relative flex flex-col justify-center overflow-hidden pt-12 pb-24 md:pb-28 lg:pt-16 lg:pb-32 bg-pe-navy"
+      className="relative flex flex-col justify-center overflow-hidden bg-pe-navy"
       style={{
         background: "linear-gradient(135deg, #001229 0%, #002B5C 40%, #0D3572 70%, #001229 100%)",
       }}
@@ -119,86 +119,85 @@ export default function HeroBanner() {
         }}
       />
 
-      <div className="max-w-full px-4 sm:px-10 lg:px-16 relative">
-        {/* Slider Frame */}
-        <div className="relative overflow-hidden rounded-[2.5rem] bg-[#001D3D]/95 border border-white/10 shadow-[0_20px_60px_rgba(0,0,0,0.4)]">
-          {/* Slider Track */}
-          <div
-            className="flex transition-transform duration-500 ease-in-out"
-            style={{ transform: `translateX(-${currentSlide * 100}%)` }}
-          >
+      <div className="w-full relative">
+        {/* Slider Track */}
+        <div
+          className="flex transition-transform duration-500 ease-in-out"
+          style={{ transform: `translateX(-${currentSlide * 100}%)` }}
+        >
             {slides.map((slide, index) => (
-              <div key={index} className="w-full flex-shrink-0 p-5 sm:p-8 md:p-14 lg:p-16 grid lg:grid-cols-12 gap-8 items-center">
-                {/* Left side content */}
-                <div className="lg:col-span-7 space-y-5 text-left">
-                  {/* Badge */}
-                  <span className="inline-flex items-center gap-1.5 px-3.5 py-1.5 rounded-full text-[10px] font-extrabold uppercase tracking-widest text-[#29ABE2] bg-[#29ABE2]/10 border border-[#29ABE2]/20">
-                    <Zap size={10} />
-                    {slide.badge}
-                  </span>
+              <div key={index} className="w-full flex-shrink-0 pt-16 pb-28 md:pt-20 md:pb-36 lg:pt-24 lg:pb-40 px-4 sm:px-10 lg:px-16">
+                <div className="max-w-7xl mx-auto grid lg:grid-cols-12 gap-8 lg:gap-12 items-center">
+                  {/* Left side content */}
+                  <div className="lg:col-span-7 space-y-5 text-left">
+                    {/* Badge */}
+                    <span className="inline-flex items-center gap-1.5 px-3.5 py-1.5 rounded-full text-[10px] font-extrabold uppercase tracking-widest text-[#29ABE2] bg-[#29ABE2]/10 border border-[#29ABE2]/20">
+                      <Zap size={10} />
+                      {slide.badge}
+                    </span>
 
-                  {/* Title */}
-                  <h1 className="text-2xl sm:text-4xl md:text-5xl lg:text-6xl font-black text-white leading-[1.08] tracking-tight whitespace-pre-line">
-                    {slide.title}
-                  </h1>
+                    {/* Title */}
+                    <h1 className="text-2xl sm:text-4xl md:text-5xl lg:text-6xl font-black text-white leading-[1.08] tracking-tight whitespace-pre-line">
+                      {slide.title}
+                    </h1>
 
-                  {/* Subtitle */}
-                  <p className="text-[#29ABE2] text-sm md:text-base font-extrabold tracking-wider uppercase">
-                    {slide.subtitle}
-                  </p>
+                    {/* Subtitle */}
+                    <p className="text-[#29ABE2] text-sm md:text-base font-extrabold tracking-wider uppercase">
+                      {slide.subtitle}
+                    </p>
 
-                  {/* Description */}
-                  <p className="text-white/60 text-sm md:text-base leading-relaxed max-w-2xl">
-                    {slide.description}
-                  </p>
+                    {/* Description */}
+                    <p className="text-white/60 text-sm md:text-base leading-relaxed max-w-2xl">
+                      {slide.description}
+                    </p>
 
-                  {/* Highlights list */}
-                  <div className="flex flex-wrap gap-4 text-xs font-bold text-white/80">
-                    {slide.highlights.map((h, i) => (
-                      <span key={i} className="flex items-center gap-1.5 bg-white/5 border border-white/10 rounded-full px-3 py-1.5">
-                        <span className="w-1.5 h-1.5 rounded-full bg-[#29ABE2]" />
-                        {h}
-                      </span>
-                    ))}
-                  </div>
+                    {/* Highlights list */}
+                    <div className="flex flex-wrap gap-4 text-xs font-bold text-white/80">
+                      {slide.highlights.map((h, i) => (
+                        <span key={i} className="flex items-center gap-1.5 bg-white/5 border border-white/10 rounded-full px-3 py-1.5">
+                          <span className="w-1.5 h-1.5 rounded-full bg-[#29ABE2]" />
+                          {h}
+                        </span>
+                      ))}
+                    </div>
 
-                  {/* Slider Control pill inside info block */}
-                  <div className="pt-4 flex items-center gap-3">
-                    <div className="inline-flex items-center gap-4 bg-white/10 border border-white/10 px-4 py-2 rounded-full text-xs font-bold text-white select-none">
-                      <button onClick={handlePrev} className="text-white/60 hover:text-white transition-colors" aria-label="Previous slide">
-                        <ChevronLeft size={16} />
-                      </button>
-                      <span>
-                        {currentSlide + 1} / {slides.length}
-                      </span>
-                      <button onClick={handleNext} className="text-white/60 hover:text-white transition-colors" aria-label="Next slide">
-                        <ChevronRight size={16} />
-                      </button>
+                    {/* Slider Control pill inside info block */}
+                    <div className="pt-4 flex items-center gap-3">
+                      <div className="inline-flex items-center gap-4 bg-white/10 border border-white/10 px-4 py-2 rounded-full text-xs font-bold text-white select-none">
+                        <button onClick={handlePrev} className="text-white/60 hover:text-white transition-colors" aria-label="Previous slide">
+                          <ChevronLeft size={16} />
+                        </button>
+                        <span>
+                          {currentSlide + 1} / {slides.length}
+                        </span>
+                        <button onClick={handleNext} className="text-white/60 hover:text-white transition-colors" aria-label="Next slide">
+                          <ChevronRight size={16} />
+                        </button>
+                      </div>
                     </div>
                   </div>
-                </div>
 
-                {/* Right side illustration */}
-                <div className="lg:col-span-5 relative flex items-center justify-center">
-                  <div className="relative rounded-2xl overflow-hidden shadow-2xl border border-white/10 bg-[#001124] w-full max-w-[420px] aspect-[4/3] flex items-center justify-center">
-                    <img
-                      src={slide.image}
-                      alt={slide.promoBadge}
-                      className="w-full h-full object-cover opacity-90"
-                    />
-                    <div className="absolute inset-0 bg-gradient-to-t from-black/40 to-transparent" />
+                  {/* Right side illustration */}
+                  <div className="lg:col-span-5 relative flex items-center justify-center">
+                    <div className="relative rounded-2xl overflow-hidden shadow-2xl border border-white/10 bg-[#001124] w-full max-w-[420px] aspect-[4/3] flex items-center justify-center">
+                      <img
+                        src={slide.image}
+                        alt={slide.promoBadge}
+                        className="w-full h-full object-cover opacity-90"
+                      />
+                      <div className="absolute inset-0 bg-gradient-to-t from-black/40 to-transparent" />
 
-                    {/* Visual Promo Badge */}
-                    <div className="absolute bottom-4 right-4 bg-pe-orange text-white text-[10px] font-black uppercase tracking-wider py-1.5 px-3.5 rounded-full shadow-lg flex items-center gap-1 border border-white/20 animate-pulse">
-                      <Award size={12} />
-                      {slide.promoBadge}
+                      {/* Visual Promo Badge */}
+                      <div className="absolute bottom-4 right-4 bg-pe-orange text-white text-[10px] font-black uppercase tracking-wider py-1.5 px-3.5 rounded-full shadow-lg flex items-center gap-1 border border-white/20 animate-pulse">
+                        <Award size={12} />
+                        {slide.promoBadge}
+                      </div>
                     </div>
                   </div>
                 </div>
               </div>
             ))}
           </div>
-        </div>
 
         {/* Postcode Checker Overlay centered at the bottom of the Hero Frame */}
         <div className="absolute bottom-[-32px] left-1/2 -translate-x-1/2 w-[92%] max-w-3xl z-30 shadow-[0_15px_40px_rgba(0,43,92,0.35)] rounded-2xl md:rounded-3xl bg-gradient-to-r from-[#29ABE2] to-[#0D5DB5] p-5 md:p-6 text-white border border-[#29ABE2]/20">

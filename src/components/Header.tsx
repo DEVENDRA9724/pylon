@@ -123,7 +123,7 @@ export default function Header() {
             : "bg-white border-b border-pe-gray-200"
         }`}
       >
-        <div className="max-w-full px-4 sm:px-8 lg:px-12 xl:px-16">
+        <div className="max-w-full px-4 sm:px-8 lg:px-12 xl:px-16 relative">
           <div className="flex items-center justify-between h-20">
             {/* LOGO — uses actual Pylon Energy logo image */}
             <Link href="/" className="flex items-center group flex-shrink-0">
@@ -152,11 +152,11 @@ export default function Header() {
                 <button className="flex items-center gap-1 px-3 xl:px-4.5 py-2 text-sm xl:text-[15.5px] font-bold text-pe-gray-700 hover:text-pe-navy rounded-lg hover:bg-pe-gray-50 transition-all whitespace-nowrap">
                   Solar Packages <ChevronDown size={14} />
                 </button>
-                <div className="mega-menu-panel" style={{ width: "820px" }}>
-                  <div className="grid grid-cols-3 gap-6">
+                <div className="mega-menu-panel">
+                  <div className="grid grid-cols-3 gap-12">
                     {/* Residential */}
                     <div>
-                      <p className="text-[10px] font-bold uppercase tracking-[0.18em] text-pe-orange mb-3 flex items-center gap-2">
+                      <p className="text-[11px] font-extrabold uppercase tracking-[0.2em] text-[#29ABE2] mb-4.5 flex items-center gap-2">
                         Residential
                         <span className="flex-1 h-px bg-pe-gray-200" />
                       </p>
@@ -164,9 +164,9 @@ export default function Header() {
                         <Link
                           key={item.href}
                           href={item.href}
-                          className="flex items-center gap-3 px-2.5 py-2 rounded-lg text-pe-gray-600 text-sm font-medium hover:bg-pe-gray-50 hover:text-pe-navy transition-all group"
+                          className="flex items-center gap-3 px-3 py-2.5 rounded-lg text-pe-gray-600 text-[15px] font-semibold hover:bg-pe-gray-50 hover:text-pe-navy transition-all group"
                         >
-                          <span className="w-7 h-7 rounded-lg bg-pe-orange-light flex items-center justify-center text-pe-orange text-xs flex-shrink-0 group-hover:bg-pe-orange group-hover:text-white transition-all">
+                          <span className="w-8 h-8 rounded-xl bg-pe-orange-light flex items-center justify-center text-pe-orange text-sm flex-shrink-0 group-hover:bg-pe-orange group-hover:text-white transition-all">
                             ⚡
                           </span>
                           {item.label}
@@ -175,7 +175,7 @@ export default function Header() {
                     </div>
                     {/* Solar + Battery */}
                     <div>
-                      <p className="text-[10px] font-bold uppercase tracking-[0.18em] text-pe-orange mb-3 flex items-center gap-2">
+                      <p className="text-[11px] font-extrabold uppercase tracking-[0.2em] text-[#29ABE2] mb-4.5 flex items-center gap-2">
                         Solar + Battery
                         <span className="flex-1 h-px bg-pe-gray-200" />
                       </p>
@@ -183,9 +183,9 @@ export default function Header() {
                         <Link
                           key={item.href}
                           href={item.href}
-                          className="flex items-center gap-3 px-2.5 py-2 rounded-lg text-pe-gray-600 text-sm font-medium hover:bg-pe-gray-50 hover:text-pe-navy transition-all group"
+                          className="flex items-center gap-3 px-3 py-2.5 rounded-lg text-pe-gray-600 text-[15px] font-semibold hover:bg-pe-gray-50 hover:text-pe-navy transition-all group"
                         >
-                          <span className="w-7 h-7 rounded-lg bg-pe-orange-light flex items-center justify-center text-pe-orange text-xs flex-shrink-0 group-hover:bg-pe-orange group-hover:text-white transition-all">
+                          <span className="w-8 h-8 rounded-xl bg-pe-orange-light flex items-center justify-center text-pe-orange text-sm flex-shrink-0 group-hover:bg-pe-orange group-hover:text-white transition-all">
                             🔋
                           </span>
                           <span className="flex-1">{item.label}</span>
@@ -199,7 +199,7 @@ export default function Header() {
                     </div>
                     {/* Commercial */}
                     <div>
-                      <p className="text-[10px] font-bold uppercase tracking-[0.18em] text-pe-orange mb-3 flex items-center gap-2">
+                      <p className="text-[11px] font-extrabold uppercase tracking-[0.2em] text-[#29ABE2] mb-4.5 flex items-center gap-2">
                         Commercial
                         <span className="flex-1 h-px bg-pe-gray-200" />
                       </p>
@@ -207,9 +207,9 @@ export default function Header() {
                         <Link
                           key={item.href}
                           href={item.href}
-                          className="flex items-center gap-3 px-2.5 py-2 rounded-lg text-pe-gray-600 text-sm font-medium hover:bg-pe-gray-50 hover:text-pe-navy transition-all group"
+                          className="flex items-center gap-3 px-3 py-2.5 rounded-lg text-pe-gray-600 text-[15px] font-semibold hover:bg-pe-gray-50 hover:text-pe-navy transition-all group"
                         >
-                          <span className="w-7 h-7 rounded-lg bg-blue-50 flex items-center justify-center text-pe-blue text-xs flex-shrink-0 group-hover:bg-pe-blue group-hover:text-white transition-all">
+                          <span className="w-8 h-8 rounded-xl bg-blue-50 flex items-center justify-center text-pe-blue text-sm flex-shrink-0 group-hover:bg-pe-blue group-hover:text-white transition-all">
                             🏭
                           </span>
                           <span className="flex-1">{item.label}</span>
@@ -223,7 +223,7 @@ export default function Header() {
                     </div>
                   </div>
                   {/* Promo card */}
-                  <div className="mt-4 pt-4 border-t border-pe-gray-100 flex items-center justify-between">
+                  <div className="mt-6 pt-5 border-t border-pe-gray-100 flex items-center justify-between">
                     <div>
                       <div className="flex items-center gap-2">
                         <span className="w-2 h-2 rounded-full bg-pe-green animate-pulse" />
@@ -235,7 +235,7 @@ export default function Header() {
                         Save up to <strong className="text-pe-orange">$3,500</strong> on your solar installation
                       </p>
                     </div>
-                    <Link href="/get-quote" className="btn-primary text-sm py-2 px-4">
+                    <Link href="/get-quote" className="btn-primary text-sm py-2.5 px-5">
                       Check My Savings →
                     </Link>
                   </div>
@@ -247,10 +247,10 @@ export default function Header() {
                 <button className="flex items-center gap-1 px-3 xl:px-4.5 py-2 text-sm xl:text-[15.5px] font-bold text-pe-gray-700 hover:text-pe-navy rounded-lg hover:bg-pe-gray-50 transition-all whitespace-nowrap">
                   Solar Batteries <ChevronDown size={14} />
                 </button>
-                <div className="mega-menu-panel" style={{ width: "520px" }}>
-                  <div className="grid grid-cols-2 gap-6">
+                <div className="mega-menu-panel">
+                  <div className="grid grid-cols-2 gap-12">
                     <div>
-                      <p className="text-[10px] font-bold uppercase tracking-[0.18em] text-pe-orange mb-3 flex items-center gap-2">
+                      <p className="text-[11px] font-extrabold uppercase tracking-[0.2em] text-[#29ABE2] mb-4.5 flex items-center gap-2">
                         Battery Systems
                         <span className="flex-1 h-px bg-pe-gray-200" />
                       </p>
@@ -258,9 +258,9 @@ export default function Header() {
                         <Link
                           key={item.href}
                           href={item.href}
-                          className="flex items-center gap-3 px-2.5 py-2 rounded-lg text-pe-gray-600 text-sm font-medium hover:bg-pe-gray-50 hover:text-pe-navy transition-all group"
+                          className="flex items-center gap-3 px-3 py-2.5 rounded-lg text-pe-gray-600 text-[15px] font-semibold hover:bg-pe-gray-50 hover:text-pe-navy transition-all group"
                         >
-                          <span className="w-7 h-7 rounded-lg bg-pe-orange-light flex items-center justify-center text-pe-orange text-xs flex-shrink-0 group-hover:bg-pe-orange group-hover:text-white transition-all">
+                          <span className="w-8 h-8 rounded-xl bg-pe-orange-light flex items-center justify-center text-pe-orange text-sm flex-shrink-0 group-hover:bg-pe-orange group-hover:text-white transition-all">
                             🔋
                           </span>
                           {item.label}
@@ -268,7 +268,7 @@ export default function Header() {
                       ))}
                     </div>
                     <div>
-                      <p className="text-[10px] font-bold uppercase tracking-[0.18em] text-pe-orange mb-3 flex items-center gap-2">
+                      <p className="text-[11px] font-extrabold uppercase tracking-[0.2em] text-[#29ABE2] mb-4.5 flex items-center gap-2">
                         By Brand
                         <span className="flex-1 h-px bg-pe-gray-200" />
                       </p>
@@ -276,8 +276,9 @@ export default function Header() {
                         <Link
                           key={item.href}
                           href={item.href}
-                          className="flex items-center gap-3 px-2.5 py-2 rounded-lg text-pe-gray-600 text-sm font-medium hover:bg-pe-gray-50 hover:text-pe-navy transition-all"
+                          className="flex items-center gap-3 px-3 py-2.5 rounded-lg text-pe-gray-600 text-[15px] font-semibold hover:bg-pe-gray-50 hover:text-pe-navy transition-all group"
                         >
+                          <span className="w-2 h-2 rounded-full bg-[#29ABE2]/30 group-hover:bg-[#29ABE2] transition-colors" />
                           {item.label}
                         </Link>
                       ))}
