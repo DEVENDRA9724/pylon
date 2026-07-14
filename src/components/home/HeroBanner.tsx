@@ -217,8 +217,8 @@ export default function HeroBanner() {
                 </div>
 
                 {/* Right side illustration - standard card style on mobile/tablet */}
-                <div className="lg:hidden p-6 pt-0 relative flex items-center justify-center">
-                  <div className="relative rounded-2xl overflow-hidden shadow-2xl border border-white/10 bg-[#001124] w-full max-w-[420px] aspect-[4/3] flex items-center justify-center">
+                <div className="lg:hidden p-6 pt-0">
+                  <div className="relative mx-auto rounded-2xl overflow-hidden shadow-2xl border border-white/10 bg-[#001124] w-full max-w-[420px] aspect-[4/3] flex items-center justify-center">
                     <img
                       src={slide.image}
                       alt={slide.promoBadge}

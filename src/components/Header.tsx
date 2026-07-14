@@ -124,7 +124,7 @@ export default function Header() {
         }`}
       >
         <div className="max-w-full px-4 sm:px-8 lg:px-12 xl:px-16 relative">
-          <div className="flex items-center justify-between h-20">
+          <div className="flex items-center justify-between h-20" style={{ position: "static" }}>
             {/* LOGO — uses actual Pylon Energy logo image */}
             <Link href="/" className="flex items-center group flex-shrink-0">
               <Image
@@ -138,7 +138,7 @@ export default function Header() {
             </Link>
 
             {/* DESKTOP NAV */}
-            <nav className="hidden lg:flex items-center gap-1 xl:gap-2.5">
+            <nav className="hidden lg:flex items-center gap-1 xl:gap-2.5" style={{ position: "static" }}>
               <Link
                 href="/"
                 className="px-3 xl:px-4.5 py-2 text-sm xl:text-[15.5px] font-bold text-pe-gray-700 hover:text-pe-navy rounded-lg hover:bg-pe-gray-50 transition-all whitespace-nowrap"
@@ -152,7 +152,7 @@ export default function Header() {
                 <button className="flex items-center gap-1 px-3 xl:px-4.5 py-2 text-sm xl:text-[15.5px] font-bold text-pe-gray-700 hover:text-pe-navy rounded-lg hover:bg-pe-gray-50 transition-all whitespace-nowrap">
                   Solar Packages <ChevronDown size={14} />
                 </button>
-                <div className="mega-menu-panel" style={{ left: 0, right: 0, width: "100%" }}>
+                <div className="mega-menu-panel" style={{ left: 0, right: 0, width: "100%", transform: "translateY(8px)" }}>
                   <div className="grid grid-cols-3 gap-12">
                     {/* Residential */}
                     <div>
@@ -247,7 +247,7 @@ export default function Header() {
                 <button className="flex items-center gap-1 px-3 xl:px-4.5 py-2 text-sm xl:text-[15.5px] font-bold text-pe-gray-700 hover:text-pe-navy rounded-lg hover:bg-pe-gray-50 transition-all whitespace-nowrap">
                   Solar Batteries <ChevronDown size={14} />
                 </button>
-                <div className="mega-menu-panel" style={{ left: 0, right: 0, width: "100%" }}>
+                <div className="mega-menu-panel" style={{ left: 0, right: 0, width: "100%", transform: "translateY(8px)" }}>
                   <div className="grid grid-cols-2 gap-12">
                     <div>
                       <p className="text-[11px] font-extrabold uppercase tracking-[0.2em] text-[#29ABE2] mb-4.5 flex items-center gap-2">
