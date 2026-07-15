@@ -1,5 +1,6 @@
 import type { Metadata } from "next";
 import HeroBanner from "@/components/home/HeroBanner";
+import HorizontalLeadForm from "@/components/home/HorizontalLeadForm";
 import TrustStats from "@/components/home/TrustStats";
 import HomeQuoteSection from "@/components/home/HomeQuoteSection";
 import Accreditations from "@/components/home/Accreditations";
@@ -27,6 +28,7 @@ export default function HomePage() {
   return (
     <>
       <HeroBanner />
+      <HorizontalLeadForm />
       <TrustStats />
       <HomeQuoteSection />
       <Accreditations />
