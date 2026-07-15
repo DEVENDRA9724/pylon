@@ -126,15 +126,21 @@ export default function Header() {
             className="absolute left-0 top-0 bottom-0 w-[220px] sm:w-[270px] md:w-[310px] xl:w-[360px] bg-white flex items-center pl-3 sm:pl-6 lg:pl-8 z-20"
           >
             <Link href="/" className="flex items-center group">
-              <svg viewBox="0 0 260 60" className="h-11 sm:h-13 md:h-15 xl:h-16 w-auto" fill="none" xmlns="http://www.w3.org/2000/svg">
-                {/* Solar Bolt Emblem */}
-                <path d="M22 6L4 32h14l-4 22 18-26H18l4-22z" fill="#FF7029" />
-                <path d="M12 20L4 32h14l-4 22" stroke="#29ABE2" strokeWidth="2.5" strokeLinecap="round" strokeLinejoin="round" />
+              <svg viewBox="0 0 285 60" className="h-11 sm:h-13 md:h-15 xl:h-16 w-auto" fill="none" xmlns="http://www.w3.org/2000/svg">
+                {/* Sun Loop (Orange) */}
+                <circle cx="20" cy="30" r="10" stroke="#FF7029" strokeWidth="3.5" />
+                {/* Sun flares */}
+                <path d="M20 14v-3M20 49v-3M8 30H5M35 30h-3M11 21l-2-2M29 39l-2-2M11 39l-2 2M29 21l-2 2" stroke="#FF7029" strokeWidth="2" strokeLinecap="round" />
+                
+                {/* Energy Loop (Cyan) */}
+                <circle cx="36" cy="30" r="10" stroke="#29ABE2" strokeWidth="3.5" />
+                {/* Interlock arc */}
+                <path d="M30 22a10 10 0 0 1 12 8" stroke="#29ABE2" strokeWidth="3.5" strokeLinecap="round" />
                 
                 {/* PYLON Text (navy) */}
-                <text x="50" y="42" fill="#002B5C" fontSize="30" fontWeight="900" fontFamily="system-ui, sans-serif" letterSpacing="0.02em">PYLON</text>
+                <text x="60" y="42" fill="#002B5C" fontSize="30" fontWeight="900" fontFamily="system-ui, sans-serif" letterSpacing="0.02em">PYLON</text>
                 {/* ENERGY Text (cyan) */}
-                <text x="165" y="42" fill="#29ABE2" fontSize="30" fontWeight="500" fontFamily="system-ui, sans-serif" letterSpacing="0.02em">ENERGY</text>
+                <text x="170" y="42" fill="#29ABE2" fontSize="30" fontWeight="500" fontFamily="system-ui, sans-serif" letterSpacing="0.02em">ENERGY</text>
               </svg>
             </Link>
           </div>
@@ -400,15 +406,21 @@ export default function Header() {
           />
           <div className="absolute right-0 top-0 bottom-0 w-80 bg-white shadow-2xl overflow-y-auto">
             <div className="flex items-center justify-between p-4 border-b border-pe-gray-200">
-              <svg viewBox="0 0 260 60" className="h-11 w-auto" fill="none" xmlns="http://www.w3.org/2000/svg">
-                {/* Solar Bolt Emblem */}
-                <path d="M22 6L4 32h14l-4 22 18-26H18l4-22z" fill="#FF7029" />
-                <path d="M12 20L4 32h14l-4 22" stroke="#29ABE2" strokeWidth="2.5" strokeLinecap="round" strokeLinejoin="round" />
+              <svg viewBox="0 0 285 60" className="h-11 w-auto" fill="none" xmlns="http://www.w3.org/2000/svg">
+                {/* Sun Loop (Orange) */}
+                <circle cx="20" cy="30" r="10" stroke="#FF7029" strokeWidth="3.5" />
+                {/* Sun flares */}
+                <path d="M20 14v-3M20 49v-3M8 30H5M35 30h-3M11 21l-2-2M29 39l-2-2M11 39l-2 2M29 21l-2 2" stroke="#FF7029" strokeWidth="2" strokeLinecap="round" />
+                
+                {/* Energy Loop (Cyan) */}
+                <circle cx="36" cy="30" r="10" stroke="#29ABE2" strokeWidth="3.5" />
+                {/* Interlock arc */}
+                <path d="M30 22a10 10 0 0 1 12 8" stroke="#29ABE2" strokeWidth="3.5" strokeLinecap="round" />
                 
                 {/* PYLON Text (navy) */}
-                <text x="50" y="42" fill="#002B5C" fontSize="30" fontWeight="900" fontFamily="system-ui, sans-serif" letterSpacing="0.02em">PYLON</text>
+                <text x="60" y="42" fill="#002B5C" fontSize="30" fontWeight="900" fontFamily="system-ui, sans-serif" letterSpacing="0.02em">PYLON</text>
                 {/* ENERGY Text (cyan) */}
-                <text x="165" y="42" fill="#29ABE2" fontSize="30" fontWeight="500" fontFamily="system-ui, sans-serif" letterSpacing="0.02em">ENERGY</text>
+                <text x="170" y="42" fill="#29ABE2" fontSize="30" fontWeight="500" fontFamily="system-ui, sans-serif" letterSpacing="0.02em">ENERGY</text>
               </svg>
               <button
                 onClick={() => setMobileOpen(false)}
