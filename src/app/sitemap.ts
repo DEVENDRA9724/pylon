@@ -15,6 +15,7 @@ export default function sitemap(): MetadataRoute.Sitemap {
     { url: `${BASE_URL}/services/solar-batteries`, lastModified: now, changeFrequency: "monthly", priority: 0.85 },
     { url: `${BASE_URL}/services/ev-charger`, lastModified: now, changeFrequency: "monthly", priority: 0.8 },
     { url: `${BASE_URL}/special-offers`, lastModified: now, changeFrequency: "weekly", priority: 0.85 },
+    { url: `${BASE_URL}/products`, lastModified: now, changeFrequency: "weekly", priority: 0.85 },
     { url: `${BASE_URL}/portfolio`, lastModified: now, changeFrequency: "monthly", priority: 0.75 },
     { url: `${BASE_URL}/rebate-checker`, lastModified: now, changeFrequency: "monthly", priority: 0.8 },
     { url: `${BASE_URL}/blog`, lastModified: now, changeFrequency: "weekly", priority: 0.75 },
