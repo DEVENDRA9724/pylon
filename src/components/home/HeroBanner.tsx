@@ -238,21 +238,21 @@ export default function HeroBanner() {
           </div>
 
           {/* Postcode Checker Strip at the bottom of the Slider Frame */}
-          <div className="bg-[#002244] border-t border-white/10 px-4 sm:px-8 lg:px-12 xl:px-16 py-5 md:py-6 text-white w-full">
+          <div className="bg-gradient-to-r from-[#001530] via-[#002244] to-[#001530] border-t border-[#29ABE2]/30 px-4 sm:px-8 lg:px-12 xl:px-16 py-6 text-white w-full shadow-[0_-8px_30px_rgba(0,0,0,0.2)]">
             <div className="max-w-7xl mx-auto flex flex-col lg:flex-row items-center justify-between gap-5">
               {/* Left section: Header */}
               <div className="text-center lg:text-left flex-shrink-0">
                 <h4 className="font-black text-white text-base lg:text-lg uppercase tracking-wider leading-none">
                   Check For Battery Offers
                 </h4>
-                <p className="text-white/80 text-[11px] lg:text-xs mt-1.5 font-semibold">
+                <p className="text-[#29ABE2] text-[11px] lg:text-xs mt-1.5 font-bold uppercase tracking-wider">
                   See local subsidies &amp; energy rebate offers in your postcode
                 </p>
               </div>
 
               {/* Center section: Input list */}
               <div className="flex flex-col sm:flex-row items-center gap-3">
-                <span className="text-[#29ABE2] font-extrabold text-xs uppercase tracking-widest text-center sm:text-left">
+                <span className="text-[#29ABE2] font-black text-xs uppercase tracking-widest text-center sm:text-left">
                   Enter Your Postcode!
                 </span>
                 <div className="flex gap-2">
@@ -267,7 +267,7 @@ export default function HeroBanner() {
                       onChange={(e) => handlePostcodeInput(idx, e)}
                       onKeyDown={(e) => handlePostcodeKeyDown(idx, e)}
                       onPaste={handlePostcodePaste}
-                      className="w-11 h-11 md:w-12 md:h-12 text-center text-lg md:text-xl font-black text-pe-navy border border-white/10 rounded-xl focus:ring-2 focus:ring-[#29ABE2] focus:outline-none transition-all bg-white"
+                      className="w-11 h-11 md:w-12 md:h-12 text-center text-lg md:text-xl font-black text-pe-navy border border-[#29ABE2]/20 rounded-xl focus:ring-2 focus:ring-[#29ABE2] focus:border-[#29ABE2] focus:shadow-[0_0_15px_rgba(41,171,226,0.35)] focus:outline-none transition-all bg-white shadow-inner hover:border-[#29ABE2]/50"
                     />
                   ))}
                 </div>
@@ -276,7 +276,11 @@ export default function HeroBanner() {
               {/* Right section: Submit button */}
               <button
                 onClick={handleSubmitPostcode}
-                className="px-6 py-3.5 bg-white text-pe-navy font-bold rounded-xl hover:bg-white/90 transition-all text-xs uppercase tracking-widest whitespace-nowrap shadow-md"
+                style={{
+                  background: "linear-gradient(135deg, #FF7029 0%, #FF8F50 100%)",
+                  boxShadow: "0 8px 24px rgba(255, 112, 41, 0.35)",
+                }}
+                className="px-7 py-4 text-white font-bold rounded-xl hover:scale-[1.02] active:scale-[0.98] hover:shadow-[0_10px_28px_rgba(255,112,41,0.5)] transition-all text-xs uppercase tracking-widest whitespace-nowrap shadow-md flex items-center justify-center gap-2 border border-white/10"
               >
                 Enter Postcode for Special Offer!
               </button>

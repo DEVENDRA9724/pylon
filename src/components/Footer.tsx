@@ -143,12 +143,7 @@ export default function Footer() {
             <span>·</span>
             <Link href="/terms-conditions" className="hover:text-white transition-colors">
               Terms &amp; Conditions
-            </Link>
-            <span>·</span>
-            <span className="flex items-center gap-1.5">
-              <img src="/netcc-approved.png" alt="NETCC Approved Seller" className="h-5 w-auto object-contain bg-white rounded-full p-0.5" />
-              <span>NETCC Approved Seller</span>
-            </span>
+            </Link>            
           </div>
         </div>
       </div>

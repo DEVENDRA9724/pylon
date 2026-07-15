@@ -1,6 +1,7 @@
 import type { Metadata } from "next";
 import HeroBanner from "@/components/home/HeroBanner";
 import TrustStats from "@/components/home/TrustStats";
+import HomeQuoteSection from "@/components/home/HomeQuoteSection";
 import Accreditations from "@/components/home/Accreditations";
 import WhyChooseUs from "@/components/home/WhyChooseUs";
 import ServicesSection from "@/components/home/ServicesSection";
@@ -27,6 +28,7 @@ export default function HomePage() {
     <>
       <HeroBanner />
       <TrustStats />
+      <HomeQuoteSection />
       <Accreditations />
       <WhyChooseUs />
       <ServicesSection />
