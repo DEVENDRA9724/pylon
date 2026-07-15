@@ -10,24 +10,34 @@ export default function Footer() {
           {/* Col 1: Brand */}
           <div className="lg:col-span-1">
             <Link href="/" className="inline-block mb-5 hover:opacity-90 transition-opacity">
-              <svg viewBox="0 0 285 60" className="h-14 w-auto" fill="none" xmlns="http://www.w3.org/2000/svg">
-                {/* PE Monogram - Solar Sunburst & Upward Growth Arrow (Exact Image Spec) */}
-                {/* PE Monogram Base (White on dark background) */}
-                <path d="M14 14 h10 c4.5 0 8 3.5 8 8 s-3.5 8-8 8 H14" stroke="#FFFFFF" strokeWidth="5.5" strokeLinejoin="miter" strokeLinecap="butt" fill="none" />
-                <path d="M14 14 v28" stroke="#FFFFFF" strokeWidth="5.5" strokeLinecap="butt" />
-                <path d="M14 30 h10" stroke="#FFFFFF" strokeWidth="5.5" strokeLinecap="butt" />
-                <path d="M14 42 h20" stroke="#FFFFFF" strokeWidth="5.5" strokeLinecap="butt" />
+              <svg viewBox="0 0 360 60" className="h-12 sm:h-14 lg:h-16 w-auto" fill="none" xmlns="http://www.w3.org/2000/svg">
+                <defs>
+                  <mask id="arrow-mask-footer">
+                    <rect width="360" height="60" fill="white" />
+                    <path d="M4 50 L20 34 L26 40 L44 22" stroke="black" strokeWidth="6" fill="none" strokeLinecap="square" strokeLinejoin="miter" />
+                    <polygon points="35,16 48,16 48,29" fill="black" />
+                  </mask>
+                </defs>
                 
-                {/* Zig-Zag Growth Arrow (Orange) */}
-                <path d="M10 42 L20 32 H16 L32 16 M26 15 L36 12 L33 22" stroke="#FF7029" strokeWidth="5.5" strokeLinejoin="miter" strokeLinecap="butt" />
+                {/* White P with hole, cut by arrow */}
+                <path d="M6 12 h18 c6.6 0 12 5.4 12 12 s-5.4 12 -12 12 H12 v12 H6 V12 Z M12 18 v12 h12 c3.3 0 6 -2.7 6 -6 s-2.7 -6 -6 -6 H12 Z" fill="#FFFFFF" fillRule="evenodd" mask="url(#arrow-mask-footer)" />
                 
-                {/* Solar Sunburst Flares (Orange) */}
-                <path d="M28 8 L25 4 M36 9 L36 5 M43 14 L46 11 M46 22 L50 22 M44 30 L48 32" stroke="#FF7029" strokeWidth="3.5" strokeLinecap="butt" />
+                {/* Cyan E horizontal bars, cut by arrow */}
+                <path d="M12 32 h22 L28 38 H12 Z" fill="#29ABE2" mask="url(#arrow-mask-footer)" />
+                <path d="M12 42 h30 L36 48 H12 Z" fill="#29ABE2" mask="url(#arrow-mask-footer)" />
                 
-                {/* PYLON Text (white, shifted right for margin) */}
-                <text x="64" y="42" fill="#FFFFFF" fontSize="30" fontWeight="900" fontFamily="var(--font-sans), system-ui, sans-serif" letterSpacing="0.03em">PYLON</text>
-                {/* ENERGY Text (cyan) */}
-                <text x="174" y="42" fill="#29ABE2" fontSize="30" fontWeight="500" fontFamily="var(--font-sans), system-ui, sans-serif" letterSpacing="0.03em">ENERGY</text>
+                {/* Orange Arrow */}
+                <path d="M4 50 L20 34 L26 40 L44 22" stroke="#FF7029" strokeWidth="3.5" fill="none" strokeLinecap="square" strokeLinejoin="miter" />
+                <polygon points="37,18 46,18 46,27" fill="#FF7029" />
+                
+                {/* Orange Sunburst Flares */}
+                <path d="M34 10 L30 6 M42 8 L42 2 M50 10 L54 6 M52 18 L58 18 M50 26 L54 30" stroke="#FF7029" strokeWidth="3.5" strokeLinecap="butt" />
+                
+                {/* Text: PYLON ENERGY on one line */}
+                <text x="68" y="42" fontSize="32" fontWeight="800" fontFamily="var(--font-sans), system-ui, sans-serif" letterSpacing="0.02em">
+                  <tspan fill="#FFFFFF">PYLON</tspan>
+                  <tspan fill="#29ABE2"> ENERGY</tspan>
+                </text>
               </svg>
             </Link>
             <p className="text-white/60 text-sm leading-relaxed mb-6">

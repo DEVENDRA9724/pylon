@@ -123,27 +123,37 @@ export default function Header() {
             style={{ 
               clipPath: "polygon(0 0, calc(100% - 40px) 0, 100% 44px, 100% 100%, 0 100%)" 
             }}
-            className="absolute left-0 top-0 bottom-0 w-[220px] sm:w-[270px] md:w-[310px] xl:w-[360px] bg-white flex items-center pl-3 sm:pl-6 lg:pl-8 z-20"
+            className="absolute left-0 top-0 bottom-0 w-[200px] sm:w-[280px] md:w-[330px] lg:w-[380px] xl:w-[430px] bg-white flex items-center pl-3 sm:pl-6 lg:pl-8 z-20"
           >
             <Link href="/" className="flex items-center group">
-              <svg viewBox="0 0 285 60" className="h-11 sm:h-13 md:h-15 xl:h-16 w-auto" fill="none" xmlns="http://www.w3.org/2000/svg">
-                {/* PE Monogram - Solar Sunburst & Upward Growth Arrow (Exact Image Spec) */}
-                {/* PE Monogram Base (Navy) */}
-                <path d="M14 14 h10 c4.5 0 8 3.5 8 8 s-3.5 8-8 8 H14" stroke="#002B5C" strokeWidth="5.5" strokeLinejoin="miter" strokeLinecap="butt" fill="none" />
-                <path d="M14 14 v28" stroke="#002B5C" strokeWidth="5.5" strokeLinecap="butt" />
-                <path d="M14 30 h10" stroke="#002B5C" strokeWidth="5.5" strokeLinecap="butt" />
-                <path d="M14 42 h20" stroke="#002B5C" strokeWidth="5.5" strokeLinecap="butt" />
+              <svg viewBox="0 0 360 60" className="h-7 sm:h-10 md:h-12 lg:h-14 xl:h-16 w-auto" fill="none" xmlns="http://www.w3.org/2000/svg">
+                <defs>
+                  <mask id="arrow-mask-header">
+                    <rect width="360" height="60" fill="white" />
+                    <path d="M4 50 L20 34 L26 40 L44 22" stroke="black" strokeWidth="6" fill="none" strokeLinecap="square" strokeLinejoin="miter" />
+                    <polygon points="35,16 48,16 48,29" fill="black" />
+                  </mask>
+                </defs>
                 
-                {/* Zig-Zag Growth Arrow (Orange) */}
-                <path d="M10 42 L20 32 H16 L32 16 M26 15 L36 12 L33 22" stroke="#FF7029" strokeWidth="5.5" strokeLinejoin="miter" strokeLinecap="butt" />
+                {/* Navy P with hole, cut by arrow */}
+                <path d="M6 12 h18 c6.6 0 12 5.4 12 12 s-5.4 12 -12 12 H12 v12 H6 V12 Z M12 18 v12 h12 c3.3 0 6 -2.7 6 -6 s-2.7 -6 -6 -6 H12 Z" fill="#002B5C" fillRule="evenodd" mask="url(#arrow-mask-header)" />
                 
-                {/* Solar Sunburst Flares (Orange) */}
-                <path d="M28 8 L25 4 M36 9 L36 5 M43 14 L46 11 M46 22 L50 22 M44 30 L48 32" stroke="#FF7029" strokeWidth="3.5" strokeLinecap="butt" />
+                {/* Cyan E horizontal bars, cut by arrow */}
+                <path d="M12 32 h22 L28 38 H12 Z" fill="#29ABE2" mask="url(#arrow-mask-header)" />
+                <path d="M12 42 h30 L36 48 H12 Z" fill="#29ABE2" mask="url(#arrow-mask-header)" />
                 
-                {/* PYLON Text (navy, using site brand font variable) */}
-                <text x="64" y="42" fill="#002B5C" fontSize="30" fontWeight="900" fontFamily="var(--font-sans), system-ui, sans-serif" letterSpacing="0.03em">PYLON</text>
-                {/* ENERGY Text (cyan) */}
-                <text x="174" y="42" fill="#29ABE2" fontSize="30" fontWeight="500" fontFamily="var(--font-sans), system-ui, sans-serif" letterSpacing="0.03em">ENERGY</text>
+                {/* Orange Arrow */}
+                <path d="M4 50 L20 34 L26 40 L44 22" stroke="#FF7029" strokeWidth="3.5" fill="none" strokeLinecap="square" strokeLinejoin="miter" />
+                <polygon points="37,18 46,18 46,27" fill="#FF7029" />
+                
+                {/* Orange Sunburst Flares */}
+                <path d="M34 10 L30 6 M42 8 L42 2 M50 10 L54 6 M52 18 L58 18 M50 26 L54 30" stroke="#FF7029" strokeWidth="3.5" strokeLinecap="butt" />
+                
+                {/* Text: PYLON ENERGY on one line */}
+                <text x="68" y="42" fontSize="32" fontWeight="800" fontFamily="var(--font-sans), system-ui, sans-serif" letterSpacing="0.02em">
+                  <tspan fill="#002B5C">PYLON</tspan>
+                  <tspan fill="#29ABE2"> ENERGY</tspan>
+                </text>
               </svg>
             </Link>
           </div>
@@ -153,7 +163,7 @@ export default function Header() {
             style={{ 
               clipPath: "polygon(0 0, 100% 0, 100% 100%, 40px 100%)"
             }}
-            className="bg-[#002B5C] h-11 flex items-center justify-end px-4 sm:px-8 lg:px-12 xl:px-16 text-white text-sm z-10 ml-[180px] sm:ml-[230px] md:ml-[270px] xl:ml-[320px] transition-all duration-300"
+            className="bg-[#002B5C] h-11 flex items-center justify-end px-4 sm:px-8 lg:px-12 xl:px-16 text-white text-sm z-10 ml-[160px] sm:ml-[240px] md:ml-[290px] lg:ml-[340px] xl:ml-[390px] transition-all duration-300"
           >
             <style>{`
               @keyframes pulse-orange {
@@ -192,7 +202,7 @@ export default function Header() {
 
           {/* MAIN HEADER (bottom bar, white bg) */}
           <div className="h-20 bg-white">
-            <div className="h-full pl-[220px] sm:pl-[270px] md:pl-[310px] xl:pl-[360px] pr-4 sm:pr-8 lg:pr-12 xl:pr-16 flex items-center justify-between relative" style={{ position: "static" }}>
+            <div className="h-full pl-[200px] sm:pl-[280px] md:pl-[330px] lg:pl-[380px] xl:pl-[430px] pr-4 sm:pr-8 lg:pr-12 xl:pr-16 flex items-center justify-between relative" style={{ position: "static" }}>
               
               {/* DESKTOP NAV */}
               <nav className="hidden lg:flex items-center justify-between flex-grow mx-4 xl:mx-8" style={{ position: "static" }}>
@@ -409,24 +419,34 @@ export default function Header() {
           />
           <div className="absolute right-0 top-0 bottom-0 w-80 bg-white shadow-2xl overflow-y-auto">
             <div className="flex items-center justify-between p-4 border-b border-pe-gray-200">
-              <svg viewBox="0 0 285 60" className="h-11 w-auto" fill="none" xmlns="http://www.w3.org/2000/svg">
-                {/* PE Monogram - Solar Sunburst & Upward Growth Arrow (Exact Image Spec) */}
-                {/* PE Monogram Base (Navy) */}
-                <path d="M14 14 h10 c4.5 0 8 3.5 8 8 s-3.5 8-8 8 H14" stroke="#002B5C" strokeWidth="5.5" strokeLinejoin="miter" strokeLinecap="butt" fill="none" />
-                <path d="M14 14 v28" stroke="#002B5C" strokeWidth="5.5" strokeLinecap="butt" />
-                <path d="M14 30 h10" stroke="#002B5C" strokeWidth="5.5" strokeLinecap="butt" />
-                <path d="M14 42 h20" stroke="#002B5C" strokeWidth="5.5" strokeLinecap="butt" />
+              <svg viewBox="0 0 360 60" className="h-8 w-auto" fill="none" xmlns="http://www.w3.org/2000/svg">
+                <defs>
+                  <mask id="arrow-mask-mobile">
+                    <rect width="360" height="60" fill="white" />
+                    <path d="M4 50 L20 34 L26 40 L44 22" stroke="black" strokeWidth="6" fill="none" strokeLinecap="square" strokeLinejoin="miter" />
+                    <polygon points="35,16 48,16 48,29" fill="black" />
+                  </mask>
+                </defs>
                 
-                {/* Zig-Zag Growth Arrow (Orange) */}
-                <path d="M10 42 L20 32 H16 L32 16 M26 15 L36 12 L33 22" stroke="#FF7029" strokeWidth="5.5" strokeLinejoin="miter" strokeLinecap="butt" />
+                {/* Navy P with hole, cut by arrow */}
+                <path d="M6 12 h18 c6.6 0 12 5.4 12 12 s-5.4 12 -12 12 H12 v12 H6 V12 Z M12 18 v12 h12 c3.3 0 6 -2.7 6 -6 s-2.7 -6 -6 -6 H12 Z" fill="#002B5C" fillRule="evenodd" mask="url(#arrow-mask-mobile)" />
                 
-                {/* Solar Sunburst Flares (Orange) */}
-                <path d="M28 8 L25 4 M36 9 L36 5 M43 14 L46 11 M46 22 L50 22 M44 30 L48 32" stroke="#FF7029" strokeWidth="3.5" strokeLinecap="butt" />
+                {/* Cyan E horizontal bars, cut by arrow */}
+                <path d="M12 32 h22 L28 38 H12 Z" fill="#29ABE2" mask="url(#arrow-mask-mobile)" />
+                <path d="M12 42 h30 L36 48 H12 Z" fill="#29ABE2" mask="url(#arrow-mask-mobile)" />
                 
-                {/* PYLON Text (navy, using site brand font variable) */}
-                <text x="64" y="42" fill="#002B5C" fontSize="30" fontWeight="900" fontFamily="var(--font-sans), system-ui, sans-serif" letterSpacing="0.03em">PYLON</text>
-                {/* ENERGY Text (cyan) */}
-                <text x="174" y="42" fill="#29ABE2" fontSize="30" fontWeight="500" fontFamily="var(--font-sans), system-ui, sans-serif" letterSpacing="0.03em">ENERGY</text>
+                {/* Orange Arrow */}
+                <path d="M4 50 L20 34 L26 40 L44 22" stroke="#FF7029" strokeWidth="3.5" fill="none" strokeLinecap="square" strokeLinejoin="miter" />
+                <polygon points="37,18 46,18 46,27" fill="#FF7029" />
+                
+                {/* Orange Sunburst Flares */}
+                <path d="M34 10 L30 6 M42 8 L42 2 M50 10 L54 6 M52 18 L58 18 M50 26 L54 30" stroke="#FF7029" strokeWidth="3.5" strokeLinecap="butt" />
+                
+                {/* Text: PYLON ENERGY on one line */}
+                <text x="68" y="42" fontSize="32" fontWeight="800" fontFamily="var(--font-sans), system-ui, sans-serif" letterSpacing="0.02em">
+                  <tspan fill="#002B5C">PYLON</tspan>
+                  <tspan fill="#29ABE2"> ENERGY</tspan>
+                </text>
               </svg>
               <button
                 onClick={() => setMobileOpen(false)}
