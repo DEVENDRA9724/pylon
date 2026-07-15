@@ -127,28 +127,18 @@ export default function Header() {
           >
             <Link href="/" className="flex items-center group">
               <svg viewBox="0 0 285 60" className="h-11 sm:h-13 md:h-15 xl:h-16 w-auto" fill="none" xmlns="http://www.w3.org/2000/svg">
-                {/* 3D Isometric Solar-Battery-Pylon Cube */}
-                {/* Top Face - Solar Panel Grid (Orange) */}
-                <path d="M24 12 L38 20 L24 29 L10 20 Z" fill="#FF7029" />
-                <line x1="24" y1="12" x2="24" y2="29" stroke="#FFFFFF" strokeWidth="1.5" />
-                <line x1="10" y1="20" x2="38" y2="20" stroke="#FFFFFF" strokeWidth="1.5" />
+                {/* Option 2: Modern & Bold (Solid Vectors) */}
+                {/* P - Stylized Orange Arrow Letter */}
+                <path d="M11 42 h5 V20 H20 L13.5 12 L7 20 H11 Z" fill="#FF7029" />
+                <path d="M16 16 h7 c4.4 0 8 3.6 8 8 s-3.6 8-8 8 H16 Z" fill="#FF7029" />
                 
-                {/* Left Face - Lithium Battery Cells (Cyan) */}
-                <path d="M10 20 L24 29 L24 46 L10 38 Z" fill="#29ABE2" />
-                <line x1="13" y1="24.5" x2="21" y2="29.5" stroke="#FFFFFF" strokeWidth="2" strokeLinecap="round" />
-                <line x1="13" y1="30.5" x2="21" y2="35.5" stroke="#FFFFFF" strokeWidth="2" strokeLinecap="round" />
-                <line x1="13" y1="36.5" x2="21" y2="41.5" stroke="#FFFFFF" strokeWidth="2" strokeLinecap="round" />
-                
-                {/* Right Face - Power Pylon Tower Grid (Navy) */}
-                <path d="M24 29 L38 20 L38 38 L24 46 Z" fill="#002B5C" />
-                <line x1="31" y1="24.5" x2="31" y2="42" stroke="#FFFFFF" strokeWidth="1.5" strokeLinecap="round" />
-                <line x1="24" y1="29" x2="38" y2="38" stroke="#FFFFFF" strokeWidth="1.2" strokeLinecap="round" />
-                <line x1="24" y1="46" x2="38" y2="20" stroke="#FFFFFF" strokeWidth="1.2" strokeLinecap="round" />
+                {/* E - Interlocking Cyan Letter */}
+                <path d="M27 16 h14 v4 H31.5 v7 H39 v4 H31.5 v7 H41 v4 H27 Z" fill="#29ABE2" />
                 
                 {/* PYLON Text (navy, using site brand font variable) */}
-                <text x="60" y="42" fill="#002B5C" fontSize="30" fontWeight="900" fontFamily="var(--font-sans), system-ui, sans-serif" letterSpacing="0.03em">PYLON</text>
+                <text x="56" y="42" fill="#002B5C" fontSize="30" fontWeight="900" fontFamily="var(--font-sans), system-ui, sans-serif" letterSpacing="0.03em">PYLON</text>
                 {/* ENERGY Text (cyan) */}
-                <text x="170" y="42" fill="#29ABE2" fontSize="30" fontWeight="500" fontFamily="var(--font-sans), system-ui, sans-serif" letterSpacing="0.03em">ENERGY</text>
+                <text x="166" y="42" fill="#29ABE2" fontSize="30" fontWeight="500" fontFamily="var(--font-sans), system-ui, sans-serif" letterSpacing="0.03em">ENERGY</text>
               </svg>
             </Link>
           </div>
@@ -415,28 +405,18 @@ export default function Header() {
           <div className="absolute right-0 top-0 bottom-0 w-80 bg-white shadow-2xl overflow-y-auto">
             <div className="flex items-center justify-between p-4 border-b border-pe-gray-200">
               <svg viewBox="0 0 285 60" className="h-11 w-auto" fill="none" xmlns="http://www.w3.org/2000/svg">
-                {/* 3D Isometric Solar-Battery-Pylon Cube */}
-                {/* Top Face - Solar Panel Grid (Orange) */}
-                <path d="M24 12 L38 20 L24 29 L10 20 Z" fill="#FF7029" />
-                <line x1="24" y1="12" x2="24" y2="29" stroke="#FFFFFF" strokeWidth="1.5" />
-                <line x1="10" y1="20" x2="38" y2="20" stroke="#FFFFFF" strokeWidth="1.5" />
+                {/* Option 2: Modern & Bold (Solid Vectors) */}
+                {/* P - Stylized Orange Arrow Letter */}
+                <path d="M11 42 h5 V20 H20 L13.5 12 L7 20 H11 Z" fill="#FF7029" />
+                <path d="M16 16 h7 c4.4 0 8 3.6 8 8 s-3.6 8-8 8 H16 Z" fill="#FF7029" />
                 
-                {/* Left Face - Lithium Battery Cells (Cyan) */}
-                <path d="M10 20 L24 29 L24 46 L10 38 Z" fill="#29ABE2" />
-                <line x1="13" y1="24.5" x2="21" y2="29.5" stroke="#FFFFFF" strokeWidth="2" strokeLinecap="round" />
-                <line x1="13" y1="30.5" x2="21" y2="35.5" stroke="#FFFFFF" strokeWidth="2" strokeLinecap="round" />
-                <line x1="13" y1="36.5" x2="21" y2="41.5" stroke="#FFFFFF" strokeWidth="2" strokeLinecap="round" />
-                
-                {/* Right Face - Power Pylon Tower Grid (Navy) */}
-                <path d="M24 29 L38 20 L38 38 L24 46 Z" fill="#002B5C" />
-                <line x1="31" y1="24.5" x2="31" y2="42" stroke="#FFFFFF" strokeWidth="1.5" strokeLinecap="round" />
-                <line x1="24" y1="29" x2="38" y2="38" stroke="#FFFFFF" strokeWidth="1.2" strokeLinecap="round" />
-                <line x1="24" y1="46" x2="38" y2="20" stroke="#FFFFFF" strokeWidth="1.2" strokeLinecap="round" />
+                {/* E - Interlocking Cyan Letter */}
+                <path d="M27 16 h14 v4 H31.5 v7 H39 v4 H31.5 v7 H41 v4 H27 Z" fill="#29ABE2" />
                 
                 {/* PYLON Text (navy, using site brand font variable) */}
-                <text x="60" y="42" fill="#002B5C" fontSize="30" fontWeight="900" fontFamily="var(--font-sans), system-ui, sans-serif" letterSpacing="0.03em">PYLON</text>
+                <text x="56" y="42" fill="#002B5C" fontSize="30" fontWeight="900" fontFamily="var(--font-sans), system-ui, sans-serif" letterSpacing="0.03em">PYLON</text>
                 {/* ENERGY Text (cyan) */}
-                <text x="170" y="42" fill="#29ABE2" fontSize="30" fontWeight="500" fontFamily="var(--font-sans), system-ui, sans-serif" letterSpacing="0.03em">ENERGY</text>
+                <text x="166" y="42" fill="#29ABE2" fontSize="30" fontWeight="500" fontFamily="var(--font-sans), system-ui, sans-serif" letterSpacing="0.03em">ENERGY</text>
               </svg>
               <button
                 onClick={() => setMobileOpen(false)}

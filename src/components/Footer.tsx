@@ -11,28 +11,18 @@ export default function Footer() {
           <div className="lg:col-span-1">
             <Link href="/" className="inline-block mb-5 hover:opacity-90 transition-opacity">
               <svg viewBox="0 0 285 60" className="h-14 w-auto" fill="none" xmlns="http://www.w3.org/2000/svg">
-                {/* 3D Isometric Solar-Battery-Pylon Cube */}
-                {/* Top Face - Solar Panel Grid (Orange) */}
-                <path d="M24 12 L38 20 L24 29 L10 20 Z" fill="#FF7029" />
-                <line x1="24" y1="12" x2="24" y2="29" stroke="#FFFFFF" strokeWidth="1.5" />
-                <line x1="10" y1="20" x2="38" y2="20" stroke="#FFFFFF" strokeWidth="1.5" />
+                {/* Option 2: Modern & Bold (Solid Vectors) */}
+                {/* P - Stylized Orange Arrow Letter */}
+                <path d="M11 42 h5 V20 H20 L13.5 12 L7 20 H11 Z" fill="#FF7029" />
+                <path d="M16 16 h7 c4.4 0 8 3.6 8 8 s-3.6 8-8 8 H16 Z" fill="#FF7029" />
                 
-                {/* Left Face - Lithium Battery Cells (Cyan) */}
-                <path d="M10 20 L24 29 L24 46 L10 38 Z" fill="#29ABE2" />
-                <line x1="13" y1="24.5" x2="21" y2="29.5" stroke="#FFFFFF" strokeWidth="2" strokeLinecap="round" />
-                <line x1="13" y1="30.5" x2="21" y2="35.5" stroke="#FFFFFF" strokeWidth="2" strokeLinecap="round" />
-                <line x1="13" y1="36.5" x2="21" y2="41.5" stroke="#FFFFFF" strokeWidth="2" strokeLinecap="round" />
-                
-                {/* Right Face - Power Pylon Tower Grid (White on dark background) */}
-                <path d="M24 29 L38 20 L38 38 L24 46 Z" fill="#FFFFFF" fillOpacity="0.15" stroke="#FFFFFF" strokeWidth="1.5" />
-                <line x1="31" y1="24.5" x2="31" y2="42" stroke="#FFFFFF" strokeWidth="1.5" strokeLinecap="round" />
-                <line x1="24" y1="29" x2="38" y2="38" stroke="#FFFFFF" strokeWidth="1.2" strokeLinecap="round" />
-                <line x1="24" y1="46" x2="38" y2="20" stroke="#FFFFFF" strokeWidth="1.2" strokeLinecap="round" />
+                {/* E - Interlocking Cyan Letter */}
+                <path d="M27 16 h14 v4 H31.5 v7 H39 v4 H31.5 v7 H41 v4 H27 Z" fill="#29ABE2" />
                 
                 {/* PYLON Text (white, using site brand font variable) */}
-                <text x="60" y="42" fill="#FFFFFF" fontSize="30" fontWeight="900" fontFamily="var(--font-sans), system-ui, sans-serif" letterSpacing="0.03em">PYLON</text>
+                <text x="56" y="42" fill="#FFFFFF" fontSize="30" fontWeight="900" fontFamily="var(--font-sans), system-ui, sans-serif" letterSpacing="0.03em">PYLON</text>
                 {/* ENERGY Text (cyan) */}
-                <text x="170" y="42" fill="#29ABE2" fontSize="30" fontWeight="500" fontFamily="var(--font-sans), system-ui, sans-serif" letterSpacing="0.03em">ENERGY</text>
+                <text x="166" y="42" fill="#29ABE2" fontSize="30" fontWeight="500" fontFamily="var(--font-sans), system-ui, sans-serif" letterSpacing="0.03em">ENERGY</text>
               </svg>
             </Link>
             <p className="text-white/60 text-sm leading-relaxed mb-6">
