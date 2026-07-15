@@ -11,20 +11,25 @@ export default function Footer() {
           <div className="lg:col-span-1">
             <Link href="/" className="inline-block mb-5 hover:opacity-90 transition-opacity">
               <svg viewBox="0 0 285 60" className="h-14 w-auto" fill="none" xmlns="http://www.w3.org/2000/svg">
-                {/* Sun Loop (Orange) */}
-                <circle cx="20" cy="30" r="10" stroke="#FF7029" strokeWidth="3.5" />
-                {/* Sun flares */}
-                <path d="M20 14v-3M20 49v-3M8 30H5M35 30h-3M11 21l-2-2M29 39l-2-2M11 39l-2 2M29 21l-2 2" stroke="#FF7029" strokeWidth="2" strokeLinecap="round" />
+                {/* Solar Sun Core (Orange) */}
+                <circle cx="16" cy="38" r="7" fill="#FF7029" />
+                <circle cx="16" cy="38" r="10" stroke="#FF7029" strokeWidth="1.5" strokeDasharray="3 3" />
                 
-                {/* Energy Loop (Cyan) */}
-                <circle cx="36" cy="30" r="10" stroke="#29ABE2" strokeWidth="3.5" />
-                {/* Interlock arc */}
-                <path d="M30 22a10 10 0 0 1 12 8" stroke="#29ABE2" strokeWidth="3.5" strokeLinecap="round" />
+                {/* Rising Energy Swoop */}
+                <path d="M16 38 C 22 28, 30 20, 42 16" stroke="#29ABE2" strokeWidth="4.5" strokeLinecap="round" />
+                
+                {/* Upward Growth Arrow (Orange) */}
+                <path d="M16 38 C 24 32, 32 24, 42 16" stroke="#FF7029" strokeWidth="4.5" strokeLinecap="round" />
+                {/* Arrow Head pointing up-right */}
+                <path d="M32 16 h10 v10" stroke="#FF7029" strokeWidth="4.5" strokeLinecap="round" strokeLinejoin="round" />
+                
+                {/* Tiny energy spark ticks */}
+                <path d="M10 28l2 2M22 26l2 2" stroke="#FF7029" strokeWidth="2.5" strokeLinecap="round" />
                 
                 {/* PYLON Text (white) */}
-                <text x="60" y="42" fill="#FFFFFF" fontSize="30" fontWeight="900" fontFamily="system-ui, sans-serif" letterSpacing="0.02em">PYLON</text>
+                <text x="56" y="42" fill="#FFFFFF" fontSize="30" fontWeight="900" fontFamily="system-ui, sans-serif" letterSpacing="0.02em">PYLON</text>
                 {/* ENERGY Text (cyan) */}
-                <text x="170" y="42" fill="#29ABE2" fontSize="30" fontWeight="500" fontFamily="system-ui, sans-serif" letterSpacing="0.02em">ENERGY</text>
+                <text x="166" y="42" fill="#29ABE2" fontSize="30" fontWeight="500" fontFamily="system-ui, sans-serif" letterSpacing="0.02em">ENERGY</text>
               </svg>
             </Link>
             <p className="text-white/60 text-sm leading-relaxed mb-6">
