@@ -123,10 +123,10 @@ export default function Header() {
             style={{ 
               clipPath: "polygon(0 0, calc(100% - 40px) 0, 100% 44px, 100% 100%, 0 100%)" 
             }}
-            className="absolute left-0 top-0 bottom-0 w-[200px] sm:w-[280px] md:w-[330px] lg:w-[380px] xl:w-[430px] bg-white flex items-center pl-3 sm:pl-6 lg:pl-8 z-20"
+            className="absolute left-0 top-0 bottom-0 w-[240px] sm:w-[320px] md:w-[370px] lg:w-[420px] xl:w-[490px] bg-white flex items-center pl-3 sm:pl-6 lg:pl-8 z-20"
           >
             <Link href="/" className="flex items-center group">
-              <svg viewBox="0 0 360 60" className="h-7 sm:h-10 md:h-12 lg:h-14 xl:h-16 w-auto" fill="none" xmlns="http://www.w3.org/2000/svg">
+              <svg viewBox="0 0 360 60" className="h-9 sm:h-12 md:h-14 lg:h-16 xl:h-[76px] w-auto" fill="none" xmlns="http://www.w3.org/2000/svg">
                 <defs>
                   <mask id="arrow-mask-header">
                     <rect width="360" height="60" fill="white" />
@@ -163,7 +163,7 @@ export default function Header() {
             style={{ 
               clipPath: "polygon(0 0, 100% 0, 100% 100%, 40px 100%)"
             }}
-            className="bg-[#002B5C] h-11 flex items-center justify-end px-4 sm:px-8 lg:px-12 xl:px-16 text-white text-sm z-10 ml-[160px] sm:ml-[240px] md:ml-[290px] lg:ml-[340px] xl:ml-[390px] transition-all duration-300"
+            className="bg-[#002B5C] h-11 flex items-center justify-end px-4 sm:px-8 lg:px-12 xl:px-16 text-white text-sm z-10 ml-[140px] sm:ml-[280px] md:ml-[330px] lg:ml-[380px] xl:ml-[450px] transition-all duration-300"
           >
             <style>{`
               @keyframes pulse-orange {
@@ -182,7 +182,7 @@ export default function Header() {
               }
             `}</style>
             <div className="flex items-center gap-6 font-semibold">
-              <Link href="/get-quote" className="hover:underline flex items-center gap-1.5">
+              <Link href="/get-quote" className="hidden sm:flex hover:underline items-center gap-1.5">
                 Make A Payment <ArrowRight size={13} className="text-[#29ABE2]" />
               </Link>
               <a href="mailto:info@pylonenergy.com.au" className="hover:underline flex items-center gap-2 hidden sm:flex">
@@ -202,7 +202,7 @@ export default function Header() {
 
           {/* MAIN HEADER (bottom bar, white bg) */}
           <div className="h-20 bg-white">
-            <div className="h-full pl-[200px] sm:pl-[280px] md:pl-[330px] lg:pl-[380px] xl:pl-[430px] pr-4 sm:pr-8 lg:pr-12 xl:pr-16 flex items-center justify-between relative" style={{ position: "static" }}>
+            <div className="h-full pl-[240px] sm:pl-[320px] md:pl-[370px] lg:pl-[420px] xl:pl-[490px] pr-4 sm:pr-8 lg:pr-12 xl:pr-16 flex items-center justify-between relative" style={{ position: "static" }}>
               
               {/* DESKTOP NAV */}
               <nav className="hidden lg:flex items-center justify-between flex-grow mx-4 xl:mx-8" style={{ position: "static" }}>
@@ -419,7 +419,7 @@ export default function Header() {
           />
           <div className="absolute right-0 top-0 bottom-0 w-80 bg-white shadow-2xl overflow-y-auto">
             <div className="flex items-center justify-between p-4 border-b border-pe-gray-200">
-              <svg viewBox="0 0 360 60" className="h-8 w-auto" fill="none" xmlns="http://www.w3.org/2000/svg">
+              <svg viewBox="0 0 360 60" className="h-10 w-auto" fill="none" xmlns="http://www.w3.org/2000/svg">
                 <defs>
                   <mask id="arrow-mask-mobile">
                     <rect width="360" height="60" fill="white" />

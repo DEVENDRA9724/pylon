@@ -5,98 +5,97 @@ const brands = [
 
 function renderBrandLogo(brand: string) {
   switch (brand) {
-    case "Tesla":
-      return (
-        <svg viewBox="0 0 24 24" className="w-5 h-5 fill-current text-[#E31937]" xmlns="http://www.w3.org/2000/svg">
-          <path d="M12 5.362l2.475-3.026s4.245.09 8.471 2.054c-1.082 1.636-3.231 2.438-3.231 2.438-.146-1.439-1.154-1.79-4.354-1.79L12 24 8.619 5.034c-3.18 0-4.188.354-4.335 1.792 0 0-2.146-.795-3.229-2.43C5.28 2.431 9.525 2.34 9.525 2.34L12 5.362l-.004.002H12v-.002zm0-3.899c3.415-.03 7.326.528 11.328 2.28" />
-        </svg>
-      );
-    case "Enphase":
-      return (
-        <svg viewBox="0 0 24 24" className="w-5 h-5" xmlns="http://www.w3.org/2000/svg">
-          <circle cx="12" cy="12" r="10" fill="#F37321" />
-          <path d="M12 6a6 6 0 0 0-6 6c0 3.31 2.69 6 6 6h4v-2.5h-4a3.5 3.5 0 0 1-3.5-3.5c0-1.93 1.57-3.5 3.5-3.5s3.5 1.57 3.5 3.5v1h-5v2h7v-3a6 6 0 0 0-6-6z" fill="#FFFFFF" />
-        </svg>
-      );
-    case "Sungrow":
-      return (
-        <svg viewBox="0 0 24 24" className="w-5 h-5" fill="none" xmlns="http://www.w3.org/2000/svg">
-          <circle cx="12" cy="12" r="10" fill="#FF7029" />
-          <path d="M12 4a8 8 0 0 0-8 8h16a8 8 0 0 0-8-8z" fill="#FFFFFF" opacity="0.25" />
-          <path d="M12 4v16M4 12h16" stroke="#FFFFFF" strokeWidth="2" />
-          <circle cx="12" cy="12" r="4" fill="#FF7029" />
-          <circle cx="12" cy="12" r="2.5" fill="#FFFFFF" />
-        </svg>
-      );
     case "Jinko Solar":
       return (
-        <svg viewBox="0 0 24 24" className="w-5 h-5" fill="none" xmlns="http://www.w3.org/2000/svg">
-          <path d="M11 3C6.58 3 3 6.58 3 11c0 3.18 1.86 5.92 4.56 7.22l1.24-2.15C6.98 15.22 6 13.23 6 11c0-2.76 2.24-5 5-5V3z" fill="#4CAF50" />
-          <path d="M9 3v3c-1.66 0-3 1.34-3 3H3c0-3.31 2.69-6 6-6z" fill="#4CAF50" />
-          <path d="M13 3v3c2.76 0 5 2.24 5 5c0 2.23-.98 4.22-2.8 6.07l1.24 2.15C19.14 16.92 21 14.18 21 11c0-4.42-3.58-8-8-8z" fill="#FF7029" />
-          <path d="M15 3c3.31 0 6 2.69 6 6h-3c0-1.66-1.34-3-3-3V3z" fill="#FF7029" />
+        <svg viewBox="0 0 140 30" className="h-8 w-auto" xmlns="http://www.w3.org/2000/svg">
+          <text x="0" y="22" fill="#00A54F" fontSize="22" fontWeight="900" fontFamily="system-ui, sans-serif" letterSpacing="0.02em">Jinko</text>
+          <text x="64" y="22" fill="#F37021" fontSize="22" fontWeight="500" fontFamily="system-ui, sans-serif" letterSpacing="0.02em">Solar</text>
         </svg>
       );
     case "Trina Solar":
       return (
-        <svg viewBox="0 0 24 24" className="w-5 h-5" fill="none" xmlns="http://www.w3.org/2000/svg">
-          <circle cx="12" cy="12" r="10" stroke="#005A9C" strokeWidth="2" />
-          <path d="M5 12c0-3.87 3.13-7 7-7s7 3.13 7 7" stroke="#29ABE2" strokeWidth="1.5" strokeLinecap="round" />
-          <path d="M8 12c0-2.21 1.79-4 4-4s4 1.79 4 4" fill="#005A9C" />
-          <path d="M12 12c0 2.21-1.79 4-4 4s-4-1.79-4-4" fill="#29ABE2" />
+        <svg viewBox="0 0 160 30" className="h-7 w-auto" xmlns="http://www.w3.org/2000/svg">
+          <path d="M5 15c0-4.5 3.5-8 8-8s8 3.5 8 8" stroke="#00A2E8" strokeWidth="2.5" fill="none" />
+          <path d="M9 15c0-2.2 1.8-4 4-4s4 1.8 4 4" fill="#004A99" />
+          <text x="30" y="21" fill="#004A99" fontSize="21" fontWeight="800" fontFamily="system-ui, sans-serif" letterSpacing="-0.02em">Trina Solar</text>
         </svg>
       );
-    case "Growatt":
+    case "Sungrow":
       return (
-        <svg viewBox="0 0 24 24" className="w-5 h-5" fill="none" xmlns="http://www.w3.org/2000/svg">
-          <path d="M3 18h18" stroke="#00B050" strokeWidth="2.5" strokeLinecap="round" />
-          <path d="M12 18V9c0-3.5 2.5-6 6-6-2.5 1.5-3.5 4-3.5 7v8" stroke="#00B050" strokeWidth="2.5" strokeLinecap="round" />
-          <path d="M12 14c-2.5-1.5-3.5-4-3.5-7C8.5 3.5 11 2 11 2v12" stroke="#00B050" strokeWidth="2" strokeLinecap="round" />
+        <svg viewBox="0 0 150 24" className="h-6 w-auto" xmlns="http://www.w3.org/2000/svg">
+          <circle cx="12" cy="12" r="10" fill="#FF7029" />
+          <path d="M12 4v16M4 12h16" stroke="#FFFFFF" strokeWidth="2" />
+          <circle cx="12" cy="12" r="3" fill="#FFFFFF" />
+          <text x="32" y="19" fill="#FF7029" fontSize="19" fontWeight="900" fontFamily="system-ui, sans-serif" letterSpacing="0.05em">SUNGROW</text>
         </svg>
       );
     case "Fronius":
       return (
-        <svg viewBox="0 0 34 12" className="w-9 h-3.5" xmlns="http://www.w3.org/2000/svg">
-          <text x="0" y="10" fill="#E30613" fontSize="9.5" fontWeight="900" fontFamily="system-ui, sans-serif" letterSpacing="0.03em">FRONIUS</text>
+        <svg viewBox="0 0 120 20" className="h-5 w-auto" xmlns="http://www.w3.org/2000/svg">
+          <text x="0" y="16" fill="#E30613" fontSize="19" fontWeight="900" fontFamily="system-ui, sans-serif" letterSpacing="0.06em">FRONIUS</text>
+        </svg>
+      );
+    case "Enphase":
+      return (
+        <svg viewBox="0 0 150 26" className="h-6 w-auto" xmlns="http://www.w3.org/2000/svg">
+          <circle cx="13" cy="13" r="11" fill="#F37321" />
+          <path d="M13 7a6 6 0 0 0-6 6c0 3.3 2.7 6 6 6h4v-2.5h-4a3.5 3.5 0 0 1-3.5-3.5c0-1.9 1.6-3.5 3.5-3.5s3.5 1.6 3.5 3.5v1h-5v2h7v-3a6 6 0 0 0-6-6z" fill="#FFFFFF" />
+          <text x="32" y="20" fill="#1C1C1C" fontSize="20" fontWeight="800" fontFamily="system-ui, sans-serif" letterSpacing="0.02em">ENPHASE</text>
         </svg>
       );
     case "GoodWe":
       return (
-        <svg viewBox="0 0 24 24" className="w-5 h-5" fill="none" xmlns="http://www.w3.org/2000/svg">
-          <circle cx="12" cy="12" r="10" fill="#E2001A" />
-          <path d="M12 6a6 6 0 1 0 6 6h-2a4 4 0 1 1-4-4V6z" fill="#FFFFFF" />
-          <circle cx="12" cy="12" r="2" fill="#FFFFFF" />
+        <svg viewBox="0 0 140 26" className="h-7 w-auto" xmlns="http://www.w3.org/2000/svg">
+          <circle cx="13" cy="13" r="11" fill="#E2001A" />
+          <path d="M13 7a6 6 0 1 0 6 6h-2a4 4 0 1 1-4-4V7z" fill="#FFFFFF" />
+          <text x="32" y="20" fill="#E2001A" fontSize="21" fontWeight="900" fontFamily="system-ui, sans-serif">GOODWE</text>
+        </svg>
+      );
+    case "Growatt":
+      return (
+        <svg viewBox="0 0 140 24" className="h-6 w-auto" xmlns="http://www.w3.org/2000/svg">
+          <path d="M4 18h14" stroke="#00B050" strokeWidth="2.5" />
+          <path d="M11 18V9c0-3.5 2.5-6 6-6-2.5 1.5-3.5 4-3.5 7v8" stroke="#00B050" strokeWidth="2.5" />
+          <text x="30" y="19" fill="#111111" fontSize="19" fontWeight="900" fontFamily="system-ui, sans-serif">Growatt</text>
+        </svg>
+      );
+    case "Tesla":
+      return (
+        <svg viewBox="0 0 120 24" className="h-5 w-auto" xmlns="http://www.w3.org/2000/svg">
+          <path d="M12 5l2.5-3s4 .1 8.5 2c-1.1 1.6-3.2 2.4-3.2 2.4-.1-1.4-1.2-1.8-4.4-1.8L12 24 8.6 5c-3.2 0-4.2.4-4.3 1.8 0 0-2.1-.8-3.2-2.4 4.2-1.9 8.5-2 8.5-2L12 5z" fill="#E31937" />
+          <text x="32" y="19" fill="#E31937" fontSize="20" fontWeight="800" fontFamily="system-ui, sans-serif" letterSpacing="0.25em">TESLA</text>
         </svg>
       );
     case "Alpha ESS":
       return (
-        <svg viewBox="0 0 24 24" className="w-5 h-5" fill="none" xmlns="http://www.w3.org/2000/svg">
+        <svg viewBox="0 0 150 24" className="h-6 w-auto" xmlns="http://www.w3.org/2000/svg">
           <path d="M12 2l8 4.5v9L12 20l-8-4.5v-9L12 2z" fill="#0D5DB5" />
-          <path d="M9 14.5l3-6 3 6M10.5 12h3" stroke="#FFFFFF" strokeWidth="2" strokeLinecap="round" strokeLinejoin="round" />
+          <path d="M9 14.5l3-6 3 6M10.5 12h3" stroke="#FFFFFF" strokeWidth="1.5" strokeLinecap="round" strokeLinejoin="round" />
+          <text x="32" y="18" fill="#0D5DB5" fontSize="18" fontWeight="900" fontFamily="system-ui, sans-serif">Alpha ESS</text>
         </svg>
       );
     case "Sigenergy":
       return (
-        <svg viewBox="0 0 24 24" className="w-5 h-5" fill="none" xmlns="http://www.w3.org/2000/svg">
+        <svg viewBox="0 0 150 24" className="h-6 w-auto" xmlns="http://www.w3.org/2000/svg">
           <circle cx="12" cy="12" r="10" fill="#00A896" />
-          <path d="M8.5 14.5c0-1.5 2-2 3.5-2.5s3.5-1 3.5-2.5c0-1.5-1.5-2-3.5-2S8.5 8.5 8.5 10" stroke="#FFFFFF" strokeWidth="2.5" strokeLinecap="round" />
-          <circle cx="15.5" cy="14.5" r="1.5" fill="#FFFFFF" />
+          <path d="M8.5 14.5c0-1.5 2-2 3.5-2.5s3.5-1 3.5-2.5c0-1.5-1.5-2-3.5-2S8.5 8.5 8.5 10" stroke="#FFFFFF" strokeWidth="2" strokeLinecap="round" />
+          <text x="32" y="18" fill="#111111" fontSize="18" fontWeight="800" fontFamily="system-ui, sans-serif">Sigenergy</text>
         </svg>
       );
     case "Solax":
       return (
-        <svg viewBox="0 0 24 24" className="w-5 h-5" fill="none" xmlns="http://www.w3.org/2000/svg">
+        <svg viewBox="0 0 130 24" className="h-6 w-auto" xmlns="http://www.w3.org/2000/svg">
           <circle cx="12" cy="12" r="10" fill="#E30613" />
-          <path d="M8 8l8 8M16 8L8 16" stroke="#FFFFFF" strokeWidth="2.5" strokeLinecap="round" />
-          <path d="M4 12c0-4.42 3.58-8 8-8" stroke="#FFFFFF" strokeWidth="1.5" opacity="0.6" />
+          <path d="M8 8l8 8M16 8L8 16" stroke="#FFFFFF" strokeWidth="2" strokeLinecap="round" />
+          <text x="30" y="18" fill="#E30613" fontSize="19" fontWeight="900" fontFamily="system-ui, sans-serif">SolaX</text>
         </svg>
       );
     case "Solis":
       return (
-        <svg viewBox="0 0 24 24" className="w-5 h-5" fill="none" xmlns="http://www.w3.org/2000/svg">
-          <circle cx="12" cy="12" r="5" fill="#FF8C00" />
+        <svg viewBox="0 0 120 24" className="h-6 w-auto" xmlns="http://www.w3.org/2000/svg">
+          <circle cx="12" cy="12" r="7" fill="#FF8C00" />
           <path d="M12 2l1.5 3h-3zM12 22l1.5-3h-3zM2 12l3 1.5v-3zM22 12l-3 1.5v-3z" fill="#FF8C00" />
-          <path d="M5 5l2 2M17 17l2 2M5 19l2-2M17 7l2 2" stroke="#FF8C00" strokeWidth="2" strokeLinecap="round" />
+          <text x="30" y="18" fill="#111111" fontSize="19" fontWeight="800" fontFamily="system-ui, sans-serif">Solis</text>
         </svg>
       );
     default:
@@ -105,47 +104,23 @@ function renderBrandLogo(brand: string) {
 }
 
 export default function BrandsCarousel() {
-  // Duplicate for seamless loop
   const all = [...brands, ...brands];
 
   return (
     <section className="section-padding bg-white overflow-hidden">
-      <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 mb-10 text-center">
+      <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 mb-12 text-center">
         <p className="section-label mx-auto justify-center" style={{ color: '#29ABE2' }}>TRUSTED BRANDS</p>
         <h2 className="section-title">Solar Brands &amp; Inverter Brands We Install</h2>
       </div>
 
-      {/* Row 1 — left */}
-      <div className="relative mb-6">
-        <div className="flex gap-5 animate-scroll-left" style={{ width: "max-content" }}>
+      <div className="relative">
+        <div className="flex gap-6 animate-scroll-left items-center py-4 px-2" style={{ width: "max-content" }}>
           {all.map((brand, i) => (
             <div
               key={i}
-              className="flex-shrink-0 flex items-center gap-3 px-5 py-3.5 rounded-2xl bg-white border border-slate-100 text-pe-navy font-bold text-sm shadow-[0_4px_15px_rgba(0,43,92,0.03)] hover:border-[#29ABE2] hover:shadow-[0_8px_25px_rgba(41,171,226,0.08)] transition-all duration-300 cursor-default whitespace-nowrap"
+              className="flex-shrink-0 flex items-center justify-center px-8 py-5 rounded-2xl bg-white border-2 border-[#E2E8F0] shadow-sm hover:border-[#29ABE2] transition-all duration-300 cursor-default"
             >
               {renderBrandLogo(brand)}
-              <span>{brand}</span>
-            </div>
-          ))}
-        </div>
-      </div>
-
-      {/* Row 2 — right (reverse direction) */}
-      <div className="relative">
-        <div
-          className="flex gap-5"
-          style={{
-            width: "max-content",
-            animation: "scroll-left 35s linear infinite reverse",
-          }}
-        >
-          {[...all].reverse().map((brand, i) => (
-            <div
-              key={i}
-              className="flex-shrink-0 flex items-center gap-3 px-5 py-3.5 rounded-2xl bg-white border border-slate-100 text-pe-gray-600 font-bold text-sm shadow-[0_4px_15px_rgba(0,43,92,0.03)] hover:border-[#002B5C] hover:shadow-[0_8px_25px_rgba(0,43,92,0.06)] transition-all duration-300 cursor-default whitespace-nowrap"
-            >
-              {renderBrandLogo(brand)}
-              <span>{brand}</span>
             </div>
           ))}
         </div>
