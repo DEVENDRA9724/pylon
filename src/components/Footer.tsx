@@ -11,25 +11,24 @@ export default function Footer() {
           <div className="lg:col-span-1">
             <Link href="/" className="inline-block mb-5 hover:opacity-90 transition-opacity">
               <svg viewBox="0 0 285 60" className="h-14 w-auto" fill="none" xmlns="http://www.w3.org/2000/svg">
-                {/* Solar Sun Core (Orange) */}
-                <circle cx="16" cy="38" r="7" fill="#FF7029" />
-                <circle cx="16" cy="38" r="10" stroke="#FF7029" strokeWidth="1.5" strokeDasharray="3 3" />
+                {/* Monogram P (White stem, Orange loop) */}
+                <rect x="8" y="16" width="4.5" height="28" fill="#FFFFFF" rx="1.5" />
+                <path d="M12.5 16h5.5c3.03 0 5.5 2.47 5.5 5.5S21.03 27 18 27h-5.5v-11z" fill="#FF7029" />
                 
-                {/* Rising Energy Swoop */}
-                <path d="M16 38 C 22 28, 30 20, 42 16" stroke="#29ABE2" strokeWidth="4.5" strokeLinecap="round" />
+                {/* Monogram E (Cyan) */}
+                <rect x="24" y="16" width="4.5" height="28" fill="#29ABE2" rx="1.5" />
+                <rect x="28.5" y="16" width="11" height="4" fill="#29ABE2" rx="1" />
+                <rect x="28.5" y="28" width="8" height="4" fill="#29ABE2" rx="1" />
+                <rect x="28.5" y="40" width="11" height="4" fill="#29ABE2" rx="1" />
                 
-                {/* Upward Growth Arrow (Orange) */}
-                <path d="M16 38 C 24 32, 32 24, 42 16" stroke="#FF7029" strokeWidth="4.5" strokeLinecap="round" />
-                {/* Arrow Head pointing up-right */}
-                <path d="M32 16 h10 v10" stroke="#FF7029" strokeWidth="4.5" strokeLinecap="round" strokeLinejoin="round" />
+                {/* Rising Increment Trend Line Arrow Slicing Through Monogram */}
+                <path d="M10 38 L19 29 L25 33 L38 18" stroke="#FF7029" strokeWidth="4.5" strokeLinecap="round" strokeLinejoin="round" />
+                <path d="M28 18 h10 v10" stroke="#FF7029" strokeWidth="4.5" strokeLinecap="round" strokeLinejoin="round" />
                 
-                {/* Tiny energy spark ticks */}
-                <path d="M10 28l2 2M22 26l2 2" stroke="#FF7029" strokeWidth="2.5" strokeLinecap="round" />
-                
-                {/* PYLON Text (white) */}
-                <text x="56" y="42" fill="#FFFFFF" fontSize="30" fontWeight="900" fontFamily="system-ui, sans-serif" letterSpacing="0.02em">PYLON</text>
+                {/* PYLON Text (white, using site brand font variable) */}
+                <text x="56" y="42" fill="#FFFFFF" fontSize="30" fontWeight="900" fontFamily="var(--font-sans), system-ui, sans-serif" letterSpacing="0.03em">PYLON</text>
                 {/* ENERGY Text (cyan) */}
-                <text x="166" y="42" fill="#29ABE2" fontSize="30" fontWeight="500" fontFamily="system-ui, sans-serif" letterSpacing="0.02em">ENERGY</text>
+                <text x="166" y="42" fill="#29ABE2" fontSize="30" fontWeight="500" fontFamily="var(--font-sans), system-ui, sans-serif" letterSpacing="0.03em">ENERGY</text>
               </svg>
             </Link>
             <p className="text-white/60 text-sm leading-relaxed mb-6">
