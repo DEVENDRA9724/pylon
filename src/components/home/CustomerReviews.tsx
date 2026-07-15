@@ -87,12 +87,12 @@ export default function CustomerReviews() {
           </div>
         </div>
 
-        {/* Review cards scroll */}
-        <div className="flex gap-5 overflow-x-auto pb-4 snap-x snap-mandatory scrollbar-hide -mx-4 px-4">
-          {reviews.map((r, i) => (
+        {/* Review cards grid: 3-column layout that stacks on mobile */}
+        <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-6 lg:gap-8 max-w-7xl mx-auto">
+          {reviews.slice(0, 3).map((r, i) => (
             <div
               key={i}
-              className="flex-none w-[300px] sm:w-[340px] rounded-2xl p-6 snap-center group transition-all duration-300 hover:-translate-y-2"
+              className="rounded-2xl p-7 group transition-all duration-300 hover:-translate-y-1.5 flex flex-col justify-between"
               style={{
                 background: "white",
                 border: "1px solid rgba(226, 232, 240, 0.8)",
@@ -101,36 +101,38 @@ export default function CustomerReviews() {
               onMouseEnter={(e) => {
                 (e.currentTarget as HTMLDivElement).style.borderColor = "#29ABE2";
                 (e.currentTarget as HTMLDivElement).style.boxShadow =
-                  "0 20px 50px rgba(41,171,226,0.15)";
+                  "0 20px 50px rgba(41,171,226,0.12)";
               }}
               onMouseLeave={(e) => {
-                (e.currentTarget as HTMLDivElement).style.borderColor = "#E2E8F0";
+                (e.currentTarget as HTMLDivElement).style.borderColor = "rgba(226, 232, 240, 0.8)";
                 (e.currentTarget as HTMLDivElement).style.boxShadow =
-                  "0 4px 20px rgba(0,43,92,0.06)";
+                  "0 10px 30px rgba(0, 43, 92, 0.04)";
               }}
             >
-              {/* Top row */}
-              <div className="flex items-start justify-between mb-4">
-                <div className="flex gap-0.5">
-                  {[...Array(r.rating)].map((_, j) => (
-                    <Star key={j} size={14} className="text-yellow-400 fill-yellow-400" />
-                  ))}
+              <div>
+                {/* Top row */}
+                <div className="flex items-start justify-between mb-4">
+                  <div className="flex gap-0.5">
+                    {[...Array(r.rating)].map((_, j) => (
+                      <Star key={j} size={14} className="text-yellow-400 fill-yellow-400" />
+                    ))}
+                  </div>
+                  <Quote size={18} className="text-[#29ABE2]/30 flex-shrink-0" />
                 </div>
-                <Quote size={18} className="text-[#29ABE2]/30 flex-shrink-0" />
-              </div>
 
-              {/* Savings badge */}
-              <div
-                className="inline-flex items-center gap-1 rounded-full px-3 py-1 text-xs font-bold mb-4"
-                style={{ background: "#E8F7FD", color: "#1A8CBD" }}
-              >
-                💰 {r.savings}
-              </div>
+                {/* Savings badge */}
+                <div
+                  className="inline-flex items-center gap-1 rounded-full px-3 py-1 text-xs font-bold mb-4"
+                  style={{ background: "#E8F7FD", color: "#1A8CBD" }}
+                >
+                  💰 {r.savings}
+                </div>
 
-              {/* Quote */}
-              <p className="text-pe-gray-600 text-sm leading-relaxed mb-5 italic">
-                &ldquo;{r.text}&rdquo;
-              </p>
+                {/* Quote */}
+                <p className="text-pe-gray-600 text-sm leading-relaxed mb-5 italic">
+                  &ldquo;{r.text}&rdquo;
+                </p>
+              </div>
 
               {/* Author */}
               <div className="border-t border-gray-100 pt-4 flex items-center gap-3">

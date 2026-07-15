@@ -66,9 +66,9 @@ export default function InstallationProcess() {
             }}
           />
 
-          <div className="grid sm:grid-cols-2 lg:grid-cols-4 gap-8">
+          <div className="grid sm:grid-cols-2 lg:grid-cols-4 gap-8 lg:gap-12 xl:gap-16">
             {steps.map((step, i) => (
-              <div key={i} className="relative flex flex-col items-center text-center group">
+              <div key={i} className="relative flex flex-col items-center text-center group px-2">
                 {/* Step circle */}
                 <div
                   className="relative z-10 w-20 h-20 rounded-full flex items-center justify-center mb-6 transition-all duration-300 group-hover:scale-110"

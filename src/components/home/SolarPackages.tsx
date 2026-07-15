@@ -185,7 +185,7 @@ export default function SolarPackages() {
         </div>
 
         {/* Cards */}
-        <div className="grid md:grid-cols-3 gap-6">
+        <div className="grid md:grid-cols-3 gap-6 lg:gap-8 xl:gap-10">
           {currentPackages.map((pkg: any, i: number) => (
             <div
               key={i}
