@@ -11,22 +11,22 @@ export default function Footer() {
           <div className="lg:col-span-1">
             <Link href="/" className="inline-block mb-5 hover:opacity-90 transition-opacity">
               <svg viewBox="0 0 285 60" className="h-14 w-auto" fill="none" xmlns="http://www.w3.org/2000/svg">
-                {/* PE Monogram - Solar Growth P & Energy E (Adjusted Spacing) */}
-                {/* P (Solar Sunburst + Upward Growth Arrow Stem) */}
-                <path d="M10 40 h6 V20 H20 L13 10 L6 20 H10 Z" fill="#FF7029" />
-                <circle cx="22.5" cy="23" r="6.5" stroke="#FF7029" strokeWidth="3.5" fill="none" />
-                <path d="M22.5 12v-2M29.5 16l2-2M33.5 23h2M29.5 30l2 2" stroke="#FF7029" strokeWidth="1.8" strokeLinecap="round" />
+                {/* PE Monogram - Solar Sunburst & Upward Growth Arrow */}
+                {/* PE Monogram Base (White on dark background) */}
+                <path d="M14 42 V14 h10 c4.4 0 8 3.6 8 8 s-3.6 8-8 8 H14" stroke="#FFFFFF" strokeWidth="5.5" strokeLinecap="round" strokeLinejoin="round" fill="none" />
+                <path d="M14 30 h10" stroke="#FFFFFF" strokeWidth="5.5" strokeLinecap="round" strokeLinejoin="round" />
+                <path d="M14 42 h11" stroke="#FFFFFF" strokeWidth="5.5" strokeLinecap="round" strokeLinejoin="round" />
                 
-                {/* E Monogram (White stem, Cyan bars - shifted right for clean spacing) */}
-                <rect x="40" y="16" width="3.5" height="24" fill="#FFFFFF" rx="1" />
-                <rect x="43.5" y="16" width="10" height="3.5" fill="#29ABE2" rx="0.8" />
-                <rect x="43.5" y="26.25" width="7" height="3.5" fill="#29ABE2" rx="0.8" />
-                <rect x="43.5" y="36.5" width="10" height="3.5" fill="#29ABE2" rx="0.8" />
+                {/* Zig-Zag Growth Arrow (Orange) */}
+                <path d="M10 42 L20 32 H16 L32 16 M26 15 L36 12 L33 22" stroke="#FF7029" strokeWidth="5.5" strokeLinecap="round" strokeLinejoin="round" />
+                
+                {/* Solar Sunburst Flares (Orange) */}
+                <path d="M28 8 L25 4 M36 9 L36 5 M43 14 L46 11 M46 22 L50 22 M44 30 L48 32" stroke="#FF7029" strokeWidth="3.5" strokeLinecap="round" />
                 
                 {/* PYLON Text (white, shifted right for margin) */}
-                <text x="68" y="42" fill="#FFFFFF" fontSize="30" fontWeight="900" fontFamily="var(--font-sans), system-ui, sans-serif" letterSpacing="0.03em">PYLON</text>
+                <text x="64" y="42" fill="#FFFFFF" fontSize="30" fontWeight="900" fontFamily="var(--font-sans), system-ui, sans-serif" letterSpacing="0.03em">PYLON</text>
                 {/* ENERGY Text (cyan) */}
-                <text x="178" y="42" fill="#29ABE2" fontSize="30" fontWeight="500" fontFamily="var(--font-sans), system-ui, sans-serif" letterSpacing="0.03em">ENERGY</text>
+                <text x="174" y="42" fill="#29ABE2" fontSize="30" fontWeight="500" fontFamily="var(--font-sans), system-ui, sans-serif" letterSpacing="0.03em">ENERGY</text>
               </svg>
             </Link>
             <p className="text-white/60 text-sm leading-relaxed mb-6">
