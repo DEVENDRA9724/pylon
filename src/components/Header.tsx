@@ -142,21 +142,21 @@ export default function Header() {
             style={{ 
               clipPath: "polygon(0 0, 100% 0, 100% 100%, 40px 100%)"
             }}
-            className="bg-[#002B5C] h-11 flex items-center justify-end px-4 sm:px-8 lg:px-12 xl:px-16 text-white text-xs z-10 ml-[180px] sm:ml-[230px] md:ml-[270px] xl:ml-[320px] transition-all duration-300"
+            className="bg-[#002B5C] h-11 flex items-center justify-end px-4 sm:px-8 lg:px-12 xl:px-16 text-white text-sm z-10 ml-[180px] sm:ml-[230px] md:ml-[270px] xl:ml-[320px] transition-all duration-300"
           >
             <div className="flex items-center gap-6 font-semibold">
               <Link href="/get-quote" className="hover:underline flex items-center gap-1.5">
-                Make A Payment <ArrowRight size={11} className="text-[#29ABE2]" />
+                Make A Payment <ArrowRight size={13} className="text-[#29ABE2]" />
               </Link>
               <a href="mailto:info@pylonenergy.com.au" className="hover:underline flex items-center gap-2 hidden sm:flex">
-                <span className="w-5.5 h-5.5 rounded-full bg-white/10 flex items-center justify-center">
-                  <Mail size={11} className="text-[#29ABE2]" />
+                <span className="w-7 h-7 rounded-full bg-white/10 flex items-center justify-center flex-shrink-0">
+                  <Mail size={13} className="text-[#29ABE2]" />
                 </span>
                 info@pylonenergy.com.au
               </a>
-              <a href="tel:1300000000" className="hover:underline flex items-center gap-2 font-black text-sm text-white">
-                <span className="w-5.5 h-5.5 rounded-full bg-[#29ABE2]/20 flex items-center justify-center">
-                  <Phone size={11} className="text-[#29ABE2]" />
+              <a href="tel:1300000000" className="hover:underline flex items-center gap-2 font-black text-[16px] xl:text-[17px] text-white">
+                <span className="w-7 h-7 rounded-full bg-[#29ABE2]/20 flex items-center justify-center flex-shrink-0">
+                  <Phone size={13} className="text-[#29ABE2]" />
                 </span>
                 1300 000 000
               </a>
