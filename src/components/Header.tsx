@@ -103,14 +103,14 @@ export default function Header() {
             className="absolute right-4 top-1/2 -translate-y-1/2 text-white/60 hover:text-white transition-colors"
             aria-label="Close announcement"
           >
-            <X size={16} />
+            <X size={24} />
           </button>
         </div>
       )}
 
       {/* TOP BAR */}
       <div className="bg-pe-navy text-white text-sm">
-        <div className="max-w-full px-4 sm:px-8 lg:px-12 xl:px-16 py-2 flex flex-wrap items-center justify-between gap-2">
+        <div className="max-w-full px-4 sm:px-8 lg:px-12 xl:px24 py-2 flex flex-wrap items-center justify-between gap-2">
           <div className="flex items-center gap-6">
             <a
               href="tel:1300000000"
@@ -138,13 +138,12 @@ export default function Header() {
 
       {/* MAIN HEADER */}
       <header
-        className={`sticky top-0 z-50 transition-all duration-300 ${
-          scrolled
-            ? "bg-white/95 backdrop-blur-md shadow-[0_4px_30px_rgba(0,43,92,0.12)]"
-            : "bg-white border-b border-pe-gray-200"
-        }`}
+        className={`sticky top-0 z-50 transition-all duration-300 ${scrolled
+          ? "bg-white/95 backdrop-blur-md shadow-[0_4px_30px_rgba(0,43,92,0.12)]"
+          : "bg-white border-b border-pe-gray-200"
+          }`}
       >
-        <div className="max-w-full px-4 sm:px-8 lg:px-12 xl:px-16 relative">
+        <div className="max-w-full px-4 sm:px-8 lg:px-12 xl:px24 relative">
           <div className="flex items-center justify-between h-20" style={{ position: "static" }}>
             {/* LOGO — uses actual Pylon Energy logo image */}
             <Link href="/" className="flex items-center group flex-shrink-0">
@@ -154,7 +153,7 @@ export default function Header() {
                 width={230}
                 height={75}
                 priority
-                className="h-16 w-auto object-contain transition-opacity group-hover:opacity-90"
+                className="h-12 w-auto object-contain transition-opacity group-hover:opacity-90"
               />
             </Link>
 
@@ -162,7 +161,7 @@ export default function Header() {
             <nav className="hidden lg:flex items-center justify-between flex-1 mx-6 xl:mx-12" style={{ position: "static" }}>
               <Link
                 href="/"
-                className="px-3 xl:px-4 py-2 text-[16px] xl:text-[18px] font-bold text-pe-gray-700 hover:text-pe-navy rounded-lg hover:bg-pe-gray-50 transition-all whitespace-nowrap"
+                className="px-3 xl:px-4 py-2 text-[20px] xl:text-[23px] font-bold text-pe-gray-700 hover:text-pe-navy rounded-lg hover:bg-pe-gray-50 transition-all whitespace-nowrap"
               >
                 Home
               </Link>
@@ -170,8 +169,8 @@ export default function Header() {
 
               {/* SOLAR PACKAGES MEGA */}
               <div className="mega-menu-trigger" style={{ position: "static" }}>
-                <button className="flex items-center gap-1 px-3 xl:px-4 py-2 text-[16px] xl:text-[18px] font-bold text-pe-gray-700 hover:text-pe-navy rounded-lg hover:bg-pe-gray-50 transition-all whitespace-nowrap">
-                  Solar Packages <ChevronDown size={16} />
+                <button className="flex items-center gap-1 px-3 xl:px-4 py-2 text-[20px] xl:text-[23px] font-bold text-pe-gray-700 hover:text-pe-navy rounded-lg hover:bg-pe-gray-50 transition-all whitespace-nowrap">
+                  Solar Packages <ChevronDown size={19} />
                 </button>
                 <div className="mega-menu-panel" style={{ left: 0, right: 0, width: "100%", transform: "translateY(8px)" }}>
                   <div className="grid grid-cols-3 gap-12">
@@ -265,8 +264,8 @@ export default function Header() {
 
               {/* SOLAR BATTERIES MEGA */}
               <div className="mega-menu-trigger" style={{ position: "static" }}>
-                <button className="flex items-center gap-1 px-3 xl:px-4 py-2 text-[16px] xl:text-[18px] font-bold text-pe-gray-700 hover:text-pe-navy rounded-lg hover:bg-pe-gray-50 transition-all whitespace-nowrap">
-                  Solar Batteries <ChevronDown size={16} />
+                <button className="flex items-center gap-1 px-3 xl:px-4 py-2 text-[20px] xl:text-[23px] font-bold text-pe-gray-700 hover:text-pe-navy rounded-lg hover:bg-pe-gray-50 transition-all whitespace-nowrap">
+                  Solar Batteries <ChevronDown size={19} />
                 </button>
                 <div className="mega-menu-panel" style={{ left: 0, right: 0, width: "100%", transform: "translateY(8px)" }}>
                   <div className="grid grid-cols-2 gap-12">
@@ -310,7 +309,7 @@ export default function Header() {
 
               <Link
                 href="/products"
-                className="px-3 xl:px-4 py-2 text-[16px] xl:text-[18px] font-bold text-pe-gray-700 hover:text-pe-navy rounded-lg hover:bg-pe-gray-50 transition-all whitespace-nowrap"
+                className="px-3 xl:px-4 py-2 text-[20px] xl:text-[23px] font-bold text-pe-gray-700 hover:text-pe-navy rounded-lg hover:bg-pe-gray-50 transition-all whitespace-nowrap"
               >
                 Products
               </Link>
@@ -318,7 +317,7 @@ export default function Header() {
 
               <Link
                 href="/rebate-checker"
-                className="px-3 xl:px-4 py-2 text-[16px] xl:text-[18px] font-bold text-pe-gray-700 hover:text-pe-navy rounded-lg hover:bg-pe-gray-50 transition-all whitespace-nowrap"
+                className="px-3 xl:px-4 py-2 text-[20px] xl:text-[23px] font-bold text-pe-gray-700 hover:text-pe-navy rounded-lg hover:bg-pe-gray-50 transition-all whitespace-nowrap"
               >
                 Rebate Checker
               </Link>
@@ -326,9 +325,9 @@ export default function Header() {
 
               <Link
                 href="/special-offers"
-                className="px-3 xl:px-4 py-2 text-[16px] xl:text-[18px] font-bold text-pe-cyan hover:text-white hover:bg-pe-cyan rounded-lg transition-all flex items-center gap-1 whitespace-nowrap"
+                className="px-3 xl:px-4 py-2 text-[20px] xl:text-[23px] font-bold text-pe-cyan hover:text-white hover:bg-pe-cyan rounded-lg transition-all flex items-center gap-1 whitespace-nowrap"
               >
-                  Special Offers
+                Special Offers
               </Link>
             </nav>
 
@@ -387,7 +386,7 @@ export default function Header() {
                   className="flex items-center justify-between w-full px-4 py-3 text-pe-gray-700 font-semibold rounded-xl hover:bg-pe-gray-50"
                 >
                   Solar Packages
-                  <ChevronDown size={16} className={`transition-transform ${mobilePackagesOpen ? "rotate-180" : ""}`} />
+                  <ChevronDown size={24} className={`transition-transform ${mobilePackagesOpen ? "rotate-180" : ""}`} />
                 </button>
                 {mobilePackagesOpen && (
                   <div className="ml-4 mt-1 space-y-1">
@@ -411,7 +410,7 @@ export default function Header() {
                   className="flex items-center justify-between w-full px-4 py-3 text-pe-gray-700 font-semibold rounded-xl hover:bg-pe-gray-50"
                 >
                   Solar Batteries
-                  <ChevronDown size={16} className={`transition-transform ${mobileBatteriesOpen ? "rotate-180" : ""}`} />
+                  <ChevronDown size={24} className={`transition-transform ${mobileBatteriesOpen ? "rotate-180" : ""}`} />
                 </button>
                 {mobileBatteriesOpen && (
                   <div className="ml-4 mt-1 space-y-1">
@@ -446,7 +445,7 @@ export default function Header() {
             </div>
             <div className="p-4 border-t border-pe-gray-200 space-y-3">
               <a href="tel:1300000000" className="flex items-center gap-2 text-pe-navy font-semibold">
-                <Phone size={16} /> 1300 000 000
+                <Phone size={24} /> 1300 000 000
               </a>
               <Link href="/get-quote" onClick={() => setMobileOpen(false)} className="btn-primary w-full justify-center">
                 Get A Free Quote →

@@ -4,11 +4,6 @@ import { ShieldCheck, Award, Users, BadgeCheck } from "lucide-react";
 export default function Accreditations() {
   const items = [
     {
-      icon: BadgeCheck,
-      title: "NETCC Approved Seller",
-      desc: "New Energy Tech Consumer Code Retailer",
-    },
-    {
       icon: Award,
       title: "CEC Accredited Installer",
       desc: "Clean Energy Council Approved Standards",
@@ -28,7 +23,7 @@ export default function Accreditations() {
   return (
     <section className="py-8 bg-pe-gray-50 border-y border-pe-gray-200">
       <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
-        <div className="grid grid-cols-2 md:grid-cols-4 gap-6 items-center text-center md:text-left">
+        <div className="grid grid-cols-1 sm:grid-cols-3 gap-6 items-center text-center md:text-left">
           {items.map((item, i) => (
             <div
               key={i}
