@@ -228,10 +228,10 @@ export default function SolarPackages() {
 
               <Link
                 href="/get-quote"
-                className={`block text-center py-3 rounded-xl font-bold text-sm transition-all ${
+                className={`block text-center py-3 rounded-xl font-bold text-sm transition-all duration-200 hover:-translate-y-0.5 ${
                   pkg.popular
-                    ? "bg-pe-orange text-white hover:bg-pe-orange-dark"
-                    : "bg-pe-navy text-white hover:bg-pe-navy-dark"
+                    ? "bg-gradient-to-r from-[#FF7029] to-[#E5601E] text-white hover:from-[#E5601E] hover:to-[#C84E12] shadow-[0_4px_12px_rgba(255,112,41,0.25)] hover:shadow-[0_6px_18px_rgba(255,112,41,0.4)]"
+                    : "border border-[#002B5C] text-[#002B5C] hover:bg-[#002B5C] hover:text-white"
                 }`}
               >
                 Get A Quote →

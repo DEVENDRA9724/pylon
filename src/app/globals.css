@@ -19,10 +19,10 @@
   --color-pe-blue: #0D5DB5;
   --color-pe-blue-light: #E8F4FD;
   --color-pe-blue-50: #EFF6FF;
-  /* CTA orange is now matched to electric cyan from the logo */
-  --color-pe-orange: var(--color-pe-orange-custom, #29ABE2);
-  --color-pe-orange-dark: var(--color-pe-orange-dark-custom, #1A8CBD);
-  --color-pe-orange-light: var(--color-pe-orange-light-custom, #E8F7FD);
+  /* CTA orange is the true high-contrast brand accent orange */
+  --color-pe-orange: var(--color-pe-orange-custom, #FF7029);
+  --color-pe-orange-dark: var(--color-pe-orange-dark-custom, #E5601E);
+  --color-pe-orange-light: var(--color-pe-orange-light-custom, #FFF0E5);
   --color-pe-white: #FFFFFF;
   --color-pe-green: #16A34A;
   --color-pe-green-light: #DCFCE7;
