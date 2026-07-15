@@ -20,7 +20,7 @@ export default function Footer() {
               />
             </Link>
             <p className="text-white/60 text-sm leading-relaxed mb-6">
-              Australian-owned solar company delivering premium solar panels, battery storage &amp; EV charging solutions across NSW and beyond. CEC Approved Retailer.
+              Australian-owned solar company delivering premium solar panels, battery storage &amp; EV charging solutions across NSW and beyond. SAA Accredited Retailer.
             </p>
             <div className="flex items-center gap-3">
               {["FB", "IG", "LN", "YT"].map((label) => (

@@ -76,7 +76,7 @@ export default function SolarBatteries() {
         <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
           <div className="text-center mb-12">
             <h2 className="section-title">Premium Brands We Carry</h2>
-            <p className="section-subtitle mx-auto">We only install batteries certified by the Clean Energy Council for maximum safety and performance.</p>
+            <p className="section-subtitle mx-auto">We only install batteries certified by the Solar Accreditation Australia for maximum safety and performance.</p>
           </div>
 
           <div className="grid md:grid-cols-3 gap-6">

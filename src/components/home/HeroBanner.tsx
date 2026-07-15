@@ -22,7 +22,7 @@ const slides = [
     title: "SAVE UP TO $3,500\nON NSW SOLAR INSTALLS",
     subtitle: "NSW CLEAN ENERGY INCENTIVE",
     description: "Secure premium Tier-1 solar panel packages with state government STC rebate incentives. Slash electricity bills by up to 90%.",
-    highlights: ["CEC Approved Retailer", "25-Year Panel Warranty", "Zero Down Interest-Free Finance"],
+    highlights: ["SAA Accredited Retailer", "25-Year Panel Warranty", "Zero Down Interest-Free Finance"],
     image: "/hero-panels.png",
     promoBadge: "NSW SUB-SCHEME ACTIVE",
     ctaText: "Check Rebate Eligibility →",

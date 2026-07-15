@@ -4,7 +4,7 @@ export default function SchemaMarkup() {
     "@type": "LocalBusiness",
     name: "Pylon Energy Pty Ltd",
     description:
-      "Premium solar panel installation, battery storage and EV charger solutions across NSW and Australia. CEC Approved Retailer.",
+      "Premium solar panel installation, battery storage and EV charger solutions across NSW and Australia. SAA Accredited Retailer.",
     url: "https://pylonenergy.com.au",
     telephone: "+611300000000",
     priceRange: "$$",
@@ -53,7 +53,7 @@ export default function SchemaMarkup() {
     name: "Pylon Energy Pty Ltd",
     url: "https://pylonenergy.com.au",
     description:
-      "Australian-owned solar company. CEC Approved Retailer offering residential, commercial and battery solar solutions.",
+      "Australian-owned solar company. SAA Accredited Retailer offering residential, commercial and battery solar solutions.",
     contactPoint: {
       "@type": "ContactPoint",
       telephone: "+611300000000",

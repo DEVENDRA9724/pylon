@@ -31,7 +31,7 @@ export default function HomeQuoteSection() {
               {[
                 {
                   title: "Accredited Advisor Consult",
-                  desc: "Obligation-free expert advice from Clean Energy Council approved solar professionals.",
+                  desc: "Obligation-free expert advice from Solar Accreditation Australia accredited solar professionals.",
                 },
                 {
                   title: "Upfront Government Rebates Applied",
@@ -59,7 +59,7 @@ export default function HomeQuoteSection() {
                   <Award size={20} />
                 </div>
                 <div>
-                  <p className="text-xs font-black text-pe-navy leading-none uppercase tracking-wide">CEC Approved</p>
+                  <p className="text-xs font-black text-pe-navy leading-none uppercase tracking-wide">SAA Accredited</p>
                   <p className="text-[10px] text-pe-gray-400 mt-0.5">Approved Solar Retailer</p>
                 </div>
               </div>

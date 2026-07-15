@@ -3,8 +3,8 @@ import { ShieldCheck, Clock, Award, Users, Wallet, BarChart3 } from "lucide-reac
 const features = [
   {
     icon: ShieldCheck,
-    title: "CEC Approved Retailer",
-    desc: "Clean Energy Council approved, meeting the highest industry standards for system design, installation, and after-sales support.",
+    title: "SAA Accredited Retailer",
+    desc: "Solar Accreditation Australia accredited, meeting the highest industry standards for system design, installation, and after-sales support.",
     accent: "#29ABE2",
   },
   {
@@ -22,7 +22,7 @@ const features = [
   {
     icon: Users,
     title: "Local Australian Team",
-    desc: "Sydney-based team of CEC-accredited installers with nationwide service coverage across NSW.",
+    desc: "Sydney-based team of SAA-accredited installers with nationwide service coverage across NSW.",
     accent: "#0D5DB5",
   },
   {

@@ -179,79 +179,79 @@ export default function SolarCalculator() {
           </div>
 
           {/* Results Display - Right side (5 cols) */}
-          <div className="lg:col-span-5 bg-pe-navy text-white rounded-3xl p-5 sm:p-8 flex flex-col justify-between shadow-md relative overflow-hidden">
+          <div className="lg:col-span-5 bg-gradient-to-br from-white to-[#F8FAFC] border border-slate-200/60 rounded-3xl p-5 sm:p-8 flex flex-col justify-between shadow-md relative overflow-hidden">
             {/* Background grid pattern */}
-            <div className="absolute inset-0 opacity-5 pointer-events-none">
+            <div className="absolute inset-0 opacity-[0.02] pointer-events-none">
               <div className="absolute inset-0" style={{
-                backgroundImage: "repeating-linear-gradient(0deg, transparent, transparent 19px, #fff 20px), repeating-linear-gradient(90deg, transparent, transparent 19px, #fff 20px)",
+                backgroundImage: "repeating-linear-gradient(0deg, transparent, transparent 19px, #000 20px), repeating-linear-gradient(90deg, transparent, transparent 19px, #000 20px)",
               }} />
             </div>
 
             <div className="relative z-10 space-y-6">
-              <h3 className="text-lg font-black tracking-wide border-b border-white/10 pb-3 flex items-center gap-2">
-                <Zap className="text-pe-cyan fill-pe-cyan" size={20} /> Projected Outcomes
+              <h3 className="text-lg font-black text-pe-navy tracking-wide border-b border-slate-100 pb-3 flex items-center gap-2">
+                <Zap className="text-[#29ABE2] fill-[#29ABE2]" size={20} /> Projected Outcomes
               </h3>
 
               {/* Recommended System Size */}
               <div>
-                <p className="text-[10px] uppercase font-bold text-white/50 tracking-widest">
+                <p className="text-[10px] uppercase font-bold text-pe-gray-400 tracking-widest">
                   Recommended System
                 </p>
-                <p className="text-3xl font-black text-pe-cyan font-mono">
+                <p className="text-3xl font-black text-[#29ABE2] font-mono">
                   {rec.size}
-                  {hasBattery && <span className="text-white text-lg font-sans font-medium ml-1"> + {rec.batterySize} Battery</span>}
+                  {hasBattery && <span className="text-pe-navy text-lg font-sans font-medium ml-1"> + {rec.batterySize} Battery</span>}
                 </p>
               </div>
 
               {/* Estimated Annual Savings */}
               <div>
-                <p className="text-[10px] uppercase font-bold text-white/50 tracking-widest">
+                <p className="text-[10px] uppercase font-bold text-pe-gray-400 tracking-widest">
                   Estimated Annual Savings
                 </p>
-                <p className="text-4xl font-black text-green-400 font-mono flex items-center">
+                <p className="text-4xl font-black text-pe-green font-mono flex items-center">
                   <DollarSign size={28} className="-mr-1.5" />
                   {annualSavings.toLocaleString()}
-                  <span className="text-white/60 text-xs font-sans font-semibold ml-2">/ year</span>
+                  <span className="text-pe-gray-500 text-xs font-sans font-semibold ml-2">/ year</span>
                 </p>
               </div>
 
-              <div className="grid grid-cols-2 gap-4 border-t border-white/10 pt-5">
+              <div className="grid grid-cols-2 gap-4 border-t border-slate-100 pt-5">
                 {/* Payback Period */}
                 <div>
-                  <p className="text-[10px] uppercase font-bold text-white/50 tracking-widest">
+                  <p className="text-[10px] uppercase font-bold text-pe-gray-400 tracking-widest">
                     Payback Period
                   </p>
-                  <p className="text-2xl font-black font-mono mt-0.5">
-                    {paybackYears} <span className="text-xs font-sans font-medium text-white/60">Years</span>
+                  <p className="text-2xl font-black text-pe-navy font-mono mt-0.5">
+                    {paybackYears} <span className="text-xs font-sans font-medium text-pe-gray-500">Years</span>
                   </p>
                 </div>
 
                 {/* Govt Rebate Saved */}
                 <div>
-                  <p className="text-[10px] uppercase font-bold text-white/50 tracking-widest">
+                  <p className="text-[10px] uppercase font-bold text-pe-gray-400 tracking-widest">
                     Upfront Rebate
                   </p>
-                  <p className="text-2xl font-black text-pe-cyan font-mono mt-0.5">
+                  <p className="text-2xl font-black text-[#29ABE2] font-mono mt-0.5">
                     ${rec.rebate}
                   </p>
                 </div>
               </div>
 
               {/* Environmental Impact */}
-              <div className="bg-white/5 border border-white/10 rounded-2xl p-4 flex items-center gap-4 mt-6">
-                <div className="w-10 h-10 rounded-xl bg-green-500/10 flex items-center justify-center flex-shrink-0">
-                  <Trees className="text-green-400" size={20} />
+              <div className="bg-[#EBF7EE] border border-green-100 rounded-2xl p-4 flex items-center gap-4 mt-6">
+                <div className="w-10 h-10 rounded-xl bg-pe-green/10 flex items-center justify-center flex-shrink-0">
+                  <Trees className="text-pe-green" size={20} />
                 </div>
                 <div>
-                  <p className="text-xs font-bold text-green-400">Green Impact</p>
-                  <p className="text-xs text-white/70 mt-0.5">
-                    Off-setting <strong className="text-white font-mono">{co2Offset}</strong> tons of CO2 annually. That is equivalent to planting <strong className="text-white font-mono">{treesPlanted}</strong> trees every single year!
+                  <p className="text-xs font-bold text-pe-green">Green Impact</p>
+                  <p className="text-xs text-pe-gray-600 mt-0.5">
+                    Off-setting <strong className="text-pe-navy font-mono">{co2Offset}</strong> tons of CO2 annually. That is equivalent to planting <strong className="text-pe-navy font-mono">{treesPlanted}</strong> trees every single year!
                   </p>
                 </div>
               </div>
             </div>
 
-            <div className="relative z-10 text-[10px] text-white/40 font-semibold mt-8 text-center">
+            <div className="relative z-10 text-[10px] text-pe-gray-400 font-semibold mt-8 text-center">
               * Calculations are estimations based on standard NSW residential usage and feed-in tariffs. Actual results may vary.
             </div>
           </div>

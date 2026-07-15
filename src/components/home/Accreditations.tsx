@@ -5,8 +5,8 @@ export default function Accreditations() {
   const items = [
     {
       icon: Award,
-      title: "CEC Accredited Installer",
-      desc: "Clean Energy Council Approved Standards",
+      title: "SAA Accredited Installer",
+      desc: "Solar Accreditation Australia Accredited Standards",
     },
     {
       icon: ShieldCheck,

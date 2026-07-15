@@ -5,7 +5,7 @@ import { Plus, X } from "lucide-react";
 const faqs = [
   {
     q: "Why should I choose Pylon Energy over other solar companies?",
-    a: "Pylon Energy is a certified Clean Energy Council Retailer, delivering premium Tier-1 solar packages with local service and 25-year warranties. We prioritize transparent pricing, custom system engineering, and lifetime monitoring support.",
+    a: "Pylon Energy is a certified Solar Accreditation Australia Retailer, delivering premium Tier-1 solar packages with local service and 25-year warranties. We prioritize transparent pricing, custom system engineering, and lifetime monitoring support.",
   },
   {
     q: "How do I know which solar system is right for my home or business?",
@@ -13,7 +13,7 @@ const faqs = [
   },
   {
     q: "Is Pylon Energy an approved solar retailer in Australia?",
-    a: "Yes, Pylon Energy is a fully certified Clean Energy Council (CEC) Approved Retailer. This guarantees that we adhere to the highest standards of safety, quality, and consumer protection in Australia.",
+    a: "Yes, Pylon Energy is a fully certified Solar Accreditation Australia (CEC) Approved Retailer. This guarantees that we adhere to the highest standards of safety, quality, and consumer protection in Australia.",
   },
   {
     q: "What government solar rebates are available in NSW in 2026?",
