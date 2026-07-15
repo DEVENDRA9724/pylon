@@ -108,243 +108,251 @@ export default function Header() {
         </div>
       )}
 
-      {/* TOP BAR */}
-      <div className="bg-pe-navy text-white text-sm">
-        <div className="max-w-full px-4 sm:px-8 lg:px-12 xl:px24 py-2 flex flex-wrap items-center justify-between gap-2">
-          <div className="flex items-center gap-6">
-            <a
-              href="tel:1300000000"
-              className="flex items-center gap-1.5 hover:text-[#29ABE2] transition-colors"
-            >
-              <Phone size={13} />
-              <span className="font-mono">1300 000 000</span>
-            </a>
-            <a
-              href="mailto:info@pylonenergy.com.au"
-              className="flex items-center gap-1.5 hover:text-[#29ABE2] transition-colors hidden sm:flex"
-            >
-              <Mail size={13} />
-              info@pylonenergy.com.au
-            </a>
-          </div>
-          <Link
-            href="/get-quote"
-            className="flex items-center gap-1 text-[#29ABE2] font-semibold hover:underline"
-          >
-            Free Quote <ArrowRight size={13} />
-          </Link>
-        </div>
-      </div>
-
-      {/* MAIN HEADER */}
+      {/* STICKY TWO-TIER HEADER */}
       <header
-        className={`sticky top-0 z-50 transition-all duration-300 ${scrolled
-          ? "bg-white/95 backdrop-blur-md shadow-[0_4px_30px_rgba(0,43,92,0.12)]"
-          : "bg-white border-b border-pe-gray-200"
-          }`}
+        className={`sticky top-0 z-50 transition-all duration-300 w-full ${
+          scrolled
+            ? "shadow-[0_4px_30px_rgba(0,43,92,0.12)] bg-white/95 backdrop-blur-md"
+            : "bg-white"
+        }`}
       >
-        <div className="max-w-full px-4 sm:px-8 lg:px-12 xl:px24 relative">
-          <div className="flex items-center justify-between h-20" style={{ position: "static" }}>
-            {/* LOGO — uses actual Pylon Energy logo image */}
-            <Link href="/" className="flex items-center group flex-shrink-0">
+        <div className="relative w-full border-b border-pe-gray-100">
+          
+          {/* DIAGONAL-CUT LOGO CONTAINER — spans both top bar and main header */}
+          <div className="absolute left-0 top-0 bottom-0 w-[180px] sm:w-[240px] md:w-[280px] xl:w-[320px] bg-white flex items-center pl-4 sm:pl-8 lg:pl-10 xl:pl-12 z-20">
+            <Link href="/" className="flex items-center group">
               <Image
                 src="/pylon-logo.png"
-                alt="Pylon Energy — Solar Panels & Battery Storage"
+                alt="Pylon Energy"
                 width={230}
                 height={75}
                 priority
-                className="h-12 w-auto object-contain transition-opacity group-hover:opacity-90"
+                className="h-8 sm:h-10 md:h-12 xl:h-14 w-auto object-contain transition-opacity group-hover:opacity-90"
               />
             </Link>
+          </div>
 
-            {/* DESKTOP NAV */}
-            <nav className="hidden lg:flex items-center justify-between flex-1 mx-6 xl:mx-12" style={{ position: "static" }}>
-              <Link
-                href="/"
-                className="px-3 xl:px-4 py-2 text-[20px] xl:text-[23px] font-bold text-pe-gray-700 hover:text-pe-navy rounded-lg hover:bg-pe-gray-50 transition-all whitespace-nowrap"
-              >
-                Home
+          {/* TOP BAR (navy bg) - slants on the left side */}
+          <div 
+            style={{ 
+              clipPath: "polygon(25px 0, 100% 0, 100% 100%, 0 100%)"
+            }}
+            className="bg-[#002B5C] h-11 flex items-center justify-end px-4 sm:px-8 lg:px-12 xl:px-16 text-white text-xs z-10 ml-[155px] sm:ml-[205px] md:ml-[245px] xl:ml-[285px] transition-all duration-300"
+          >
+            <div className="flex items-center gap-6 font-semibold">
+              <Link href="/get-quote" className="hover:underline flex items-center gap-1.5">
+                Make A Payment <ArrowRight size={11} className="text-[#29ABE2]" />
               </Link>
-
-
-              {/* SOLAR PACKAGES MEGA */}
-              <div className="mega-menu-trigger" style={{ position: "static" }}>
-                <button className="flex items-center gap-1 px-3 xl:px-4 py-2 text-[20px] xl:text-[23px] font-bold text-pe-gray-700 hover:text-pe-navy rounded-lg hover:bg-pe-gray-50 transition-all whitespace-nowrap">
-                  Solar Packages <ChevronDown size={19} />
-                </button>
-                <div className="mega-menu-panel" style={{ left: 0, right: 0, width: "100%", transform: "translateY(8px)" }}>
-                  <div className="grid grid-cols-3 gap-12">
-                    {/* Residential */}
-                    <div>
-                      <p className="text-[11px] font-extrabold uppercase tracking-[0.2em] text-[#29ABE2] mb-4.5 flex items-center gap-2">
-                        Residential
-                        <span className="flex-1 h-px bg-pe-gray-200" />
-                      </p>
-                      {solarPackagesMenu.residential.map((item) => (
-                        <Link
-                          key={item.href}
-                          href={item.href}
-                          className="flex items-center gap-3 px-3 py-2.5 rounded-lg text-pe-gray-600 text-[15px] font-semibold hover:bg-pe-gray-50 hover:text-pe-navy transition-all group"
-                        >
-                          <span className="w-8 h-8 rounded-xl bg-pe-orange-light flex items-center justify-center text-pe-orange text-sm flex-shrink-0 group-hover:bg-pe-orange group-hover:text-white transition-all">
-                            ⚡
-                          </span>
-                          {item.label}
-                        </Link>
-                      ))}
-                    </div>
-                    {/* Solar + Battery */}
-                    <div>
-                      <p className="text-[11px] font-extrabold uppercase tracking-[0.2em] text-[#29ABE2] mb-4.5 flex items-center gap-2">
-                        Solar + Battery
-                        <span className="flex-1 h-px bg-pe-gray-200" />
-                      </p>
-                      {solarPackagesMenu.solarBattery.map((item) => (
-                        <Link
-                          key={item.href}
-                          href={item.href}
-                          className="flex items-center gap-3 px-3 py-2.5 rounded-lg text-pe-gray-600 text-[15px] font-semibold hover:bg-pe-gray-50 hover:text-pe-navy transition-all group"
-                        >
-                          <span className="w-8 h-8 rounded-xl bg-pe-orange-light flex items-center justify-center text-pe-orange text-sm flex-shrink-0 group-hover:bg-pe-orange group-hover:text-white transition-all">
-                            🔋
-                          </span>
-                          <span className="flex-1">{item.label}</span>
-                          {item.badge && (
-                            <span className="text-[10px] font-bold px-2 py-0.5 rounded-full bg-pe-orange-light text-pe-orange border border-pe-orange/20">
-                              {item.badge}
-                            </span>
-                          )}
-                        </Link>
-                      ))}
-                    </div>
-                    {/* Commercial */}
-                    <div>
-                      <p className="text-[11px] font-extrabold uppercase tracking-[0.2em] text-[#29ABE2] mb-4.5 flex items-center gap-2">
-                        Commercial
-                        <span className="flex-1 h-px bg-pe-gray-200" />
-                      </p>
-                      {solarPackagesMenu.commercial.map((item) => (
-                        <Link
-                          key={item.href}
-                          href={item.href}
-                          className="flex items-center gap-3 px-3 py-2.5 rounded-lg text-pe-gray-600 text-[15px] font-semibold hover:bg-pe-gray-50 hover:text-pe-navy transition-all group"
-                        >
-                          <span className="w-8 h-8 rounded-xl bg-blue-50 flex items-center justify-center text-pe-blue text-sm flex-shrink-0 group-hover:bg-pe-blue group-hover:text-white transition-all">
-                            🏭
-                          </span>
-                          <span className="flex-1">{item.label}</span>
-                          {item.badge && (
-                            <span className="text-[10px] font-bold px-2 py-0.5 rounded-full bg-blue-50 text-pe-blue border border-blue-200">
-                              {item.badge}
-                            </span>
-                          )}
-                        </Link>
-                      ))}
-                    </div>
-                  </div>
-                  {/* Promo card */}
-                  <div className="mt-6 pt-5 border-t border-pe-gray-100 flex items-center justify-between">
-                    <div>
-                      <div className="flex items-center gap-2">
-                        <span className="w-2 h-2 rounded-full bg-pe-green animate-pulse" />
-                        <span className="text-[10px] font-bold uppercase tracking-widest text-pe-green">
-                          2026 Rebates Active
-                        </span>
-                      </div>
-                      <p className="text-pe-gray-600 text-sm mt-0.5">
-                        Save up to <strong className="text-pe-orange">$3,500</strong> on your solar installation
-                      </p>
-                    </div>
-                    <Link href="/get-quote" className="btn-primary text-sm py-2.5 px-5">
-                      Check My Savings →
-                    </Link>
-                  </div>
-                </div>
-              </div>
-
-              {/* SOLAR BATTERIES MEGA */}
-              <div className="mega-menu-trigger" style={{ position: "static" }}>
-                <button className="flex items-center gap-1 px-3 xl:px-4 py-2 text-[20px] xl:text-[23px] font-bold text-pe-gray-700 hover:text-pe-navy rounded-lg hover:bg-pe-gray-50 transition-all whitespace-nowrap">
-                  Solar Batteries <ChevronDown size={19} />
-                </button>
-                <div className="mega-menu-panel" style={{ left: 0, right: 0, width: "100%", transform: "translateY(8px)" }}>
-                  <div className="grid grid-cols-2 gap-12">
-                    <div>
-                      <p className="text-[11px] font-extrabold uppercase tracking-[0.2em] text-[#29ABE2] mb-4.5 flex items-center gap-2">
-                        Battery Systems
-                        <span className="flex-1 h-px bg-pe-gray-200" />
-                      </p>
-                      {batteriesMenu.systems.map((item) => (
-                        <Link
-                          key={item.href}
-                          href={item.href}
-                          className="flex items-center gap-3 px-3 py-2.5 rounded-lg text-pe-gray-600 text-[15px] font-semibold hover:bg-pe-gray-50 hover:text-pe-navy transition-all group"
-                        >
-                          <span className="w-8 h-8 rounded-xl bg-pe-orange-light flex items-center justify-center text-pe-orange text-sm flex-shrink-0 group-hover:bg-pe-orange group-hover:text-white transition-all">
-                            🔋
-                          </span>
-                          {item.label}
-                        </Link>
-                      ))}
-                    </div>
-                    <div>
-                      <p className="text-[11px] font-extrabold uppercase tracking-[0.2em] text-[#29ABE2] mb-4.5 flex items-center gap-2">
-                        By Brand
-                        <span className="flex-1 h-px bg-pe-gray-200" />
-                      </p>
-                      {batteriesMenu.brands.map((item) => (
-                        <Link
-                          key={item.href}
-                          href={item.href}
-                          className="flex items-center gap-3 px-3 py-2.5 rounded-lg text-pe-gray-600 text-[15px] font-semibold hover:bg-pe-gray-50 hover:text-pe-navy transition-all group"
-                        >
-                          <span className="w-2 h-2 rounded-full bg-[#29ABE2]/30 group-hover:bg-[#29ABE2] transition-colors" />
-                          {item.label}
-                        </Link>
-                      ))}
-                    </div>
-                  </div>
-                </div>
-              </div>
-
-              <Link
-                href="/products"
-                className="px-3 xl:px-4 py-2 text-[20px] xl:text-[23px] font-bold text-pe-gray-700 hover:text-pe-navy rounded-lg hover:bg-pe-gray-50 transition-all whitespace-nowrap"
-              >
-                Products
-              </Link>
-
-
-              <Link
-                href="/rebate-checker"
-                className="px-3 xl:px-4 py-2 text-[20px] xl:text-[23px] font-bold text-pe-gray-700 hover:text-pe-navy rounded-lg hover:bg-pe-gray-50 transition-all whitespace-nowrap"
-              >
-                Rebate Checker
-              </Link>
-
-
-              <Link
-                href="/special-offers"
-                className="px-3 xl:px-4 py-2 text-[20px] xl:text-[23px] font-bold text-pe-cyan hover:text-white hover:bg-pe-cyan rounded-lg transition-all flex items-center gap-1 whitespace-nowrap"
-              >
-                Special Offers
-              </Link>
-            </nav>
-
-            {/* CTA + MOBILE TOGGLE */}
-            <div className="flex items-center gap-3">
-              <Link href="/get-quote" className="btn-primary hidden sm:flex text-sm py-2.5 px-5">
-                Get A Quote →
-              </Link>
-              <button
-                onClick={() => setMobileOpen(true)}
-                className="lg:hidden p-2 rounded-lg text-pe-gray-700 hover:bg-pe-gray-100 transition-colors"
-                aria-label="Open menu"
-              >
-                <Menu size={22} />
-              </button>
+              <a href="mailto:info@pylonenergy.com.au" className="hover:underline flex items-center gap-2 hidden sm:flex">
+                <span className="w-5.5 h-5.5 rounded-full bg-white/10 flex items-center justify-center">
+                  <Mail size={11} className="text-[#29ABE2]" />
+                </span>
+                info@pylonenergy.com.au
+              </a>
+              <a href="tel:1300000000" className="hover:underline flex items-center gap-2 font-black text-sm text-white">
+                <span className="w-5.5 h-5.5 rounded-full bg-[#29ABE2]/20 flex items-center justify-center">
+                  <Phone size={11} className="text-[#29ABE2]" />
+                </span>
+                1300 000 000
+              </a>
             </div>
           </div>
+
+          {/* MAIN HEADER (bottom bar, white bg) */}
+          <div className="h-20 bg-white">
+            <div className="h-full pl-[180px] sm:pl-[240px] md:pl-[280px] xl:pl-[320px] pr-4 sm:pr-8 lg:pr-12 xl:pr-16 flex items-center justify-between relative" style={{ position: "static" }}>
+              
+              {/* DESKTOP NAV */}
+              <nav className="hidden lg:flex items-center justify-between flex-grow mx-4 xl:mx-8" style={{ position: "static" }}>
+                <Link
+                  href="/"
+                  className="px-3 xl:px-4 py-2 text-[20px] xl:text-[23px] font-bold text-pe-gray-700 hover:text-pe-navy rounded-lg hover:bg-pe-gray-50 transition-all whitespace-nowrap"
+                >
+                  Home
+                </Link>
+
+                {/* SOLAR PACKAGES MEGA */}
+                <div className="mega-menu-trigger" style={{ position: "static" }}>
+                  <button className="flex items-center gap-1 px-3 xl:px-4 py-2 text-[20px] xl:text-[23px] font-bold text-pe-gray-700 hover:text-pe-navy rounded-lg hover:bg-pe-gray-50 transition-all whitespace-nowrap">
+                    Solar Packages <ChevronDown size={19} />
+                  </button>
+                  <div className="mega-menu-panel" style={{ left: 0, right: 0, width: "100%", transform: "translateY(8px)" }}>
+                    <div className="grid grid-cols-3 gap-12">
+                      {/* Residential */}
+                      <div>
+                        <p className="text-[11px] font-extrabold uppercase tracking-[0.2em] text-[#29ABE2] mb-4.5 flex items-center gap-2">
+                          Residential
+                          <span className="flex-1 h-px bg-pe-gray-200" />
+                        </p>
+                        {solarPackagesMenu.residential.map((item) => (
+                          <Link
+                            key={item.href}
+                            href={item.href}
+                            className="flex items-center gap-3 px-3 py-2.5 rounded-lg text-pe-gray-600 text-[15px] font-semibold hover:bg-pe-gray-50 hover:text-pe-navy transition-all group"
+                          >
+                            <span className="w-8 h-8 rounded-xl bg-pe-orange-light flex items-center justify-center text-pe-orange text-sm flex-shrink-0 group-hover:bg-pe-orange group-hover:text-white transition-all">
+                              ⚡
+                            </span>
+                            {item.label}
+                          </Link>
+                        ))}
+                      </div>
+                      {/* Solar + Battery */}
+                      <div>
+                        <p className="text-[11px] font-extrabold uppercase tracking-[0.2em] text-[#29ABE2] mb-4.5 flex items-center gap-2">
+                          Solar + Battery
+                          <span className="flex-1 h-px bg-pe-gray-200" />
+                        </p>
+                        {solarPackagesMenu.solarBattery.map((item) => (
+                          <Link
+                            key={item.href}
+                            href={item.href}
+                            className="flex items-center gap-3 px-3 py-2.5 rounded-lg text-pe-gray-600 text-[15px] font-semibold hover:bg-pe-gray-50 hover:text-pe-navy transition-all group"
+                          >
+                            <span className="w-8 h-8 rounded-xl bg-pe-orange-light flex items-center justify-center text-pe-orange text-sm flex-shrink-0 group-hover:bg-pe-orange group-hover:text-white transition-all">
+                              🔋
+                            </span>
+                            <span className="flex-1">{item.label}</span>
+                            {item.badge && (
+                              <span className="text-[10px] font-bold px-2 py-0.5 rounded-full bg-pe-orange-light text-pe-orange border border-pe-orange/20">
+                                {item.badge}
+                              </span>
+                            )}
+                          </Link>
+                        ))}
+                      </div>
+                      {/* Commercial */}
+                      <div>
+                        <p className="text-[11px] font-extrabold uppercase tracking-[0.2em] text-[#29ABE2] mb-4.5 flex items-center gap-2">
+                          Commercial
+                          <span className="flex-1 h-px bg-pe-gray-200" />
+                        </p>
+                        {solarPackagesMenu.commercial.map((item) => (
+                          <Link
+                            key={item.href}
+                            href={item.href}
+                            className="flex items-center gap-3 px-3 py-2.5 rounded-lg text-pe-gray-600 text-[15px] font-semibold hover:bg-pe-gray-50 hover:text-pe-navy transition-all group"
+                          >
+                            <span className="w-8 h-8 rounded-xl bg-blue-50 flex items-center justify-center text-pe-blue text-sm flex-shrink-0 group-hover:bg-pe-blue group-hover:text-white transition-all">
+                              🏭
+                            </span>
+                            <span className="flex-1">{item.label}</span>
+                            {item.badge && (
+                              <span className="text-[10px] font-bold px-2 py-0.5 rounded-full bg-blue-50 text-pe-blue border border-blue-200">
+                                {item.badge}
+                              </span>
+                            )}
+                          </Link>
+                        ))}
+                      </div>
+                    </div>
+                    {/* Promo card */}
+                    <div className="mt-6 pt-5 border-t border-pe-gray-100 flex items-center justify-between">
+                      <div>
+                        <div className="flex items-center gap-2">
+                          <span className="w-2 h-2 rounded-full bg-pe-green animate-pulse" />
+                          <span className="text-[10px] font-bold uppercase tracking-widest text-pe-green">
+                            2026 Rebates Active
+                          </span>
+                        </div>
+                        <p className="text-pe-gray-600 text-sm mt-0.5">
+                          Save up to <strong className="text-pe-orange">$3,500</strong> on your solar installation
+                        </p>
+                      </div>
+                      <Link href="/get-quote" className="btn-primary text-sm py-2.5 px-5">
+                        Check My Savings →
+                      </Link>
+                    </div>
+                  </div>
+                </div>
+
+                {/* SOLAR BATTERIES MEGA */}
+                <div className="mega-menu-trigger" style={{ position: "static" }}>
+                  <button className="flex items-center gap-1 px-3 xl:px-4 py-2 text-[20px] xl:text-[23px] font-bold text-pe-gray-700 hover:text-pe-navy rounded-lg hover:bg-pe-gray-50 transition-all whitespace-nowrap">
+                    Solar Batteries <ChevronDown size={19} />
+                  </button>
+                  <div className="mega-menu-panel" style={{ left: 0, right: 0, width: "100%", transform: "translateY(8px)" }}>
+                    <div className="grid grid-cols-2 gap-12">
+                      <div>
+                        <p className="text-[11px] font-extrabold uppercase tracking-[0.2em] text-[#29ABE2] mb-4.5 flex items-center gap-2">
+                          Battery Systems
+                          <span className="flex-1 h-px bg-pe-gray-200" />
+                        </p>
+                        {batteriesMenu.systems.map((item) => (
+                          <Link
+                            key={item.href}
+                            href={item.href}
+                            className="flex items-center gap-3 px-3 py-2.5 rounded-lg text-pe-gray-600 text-[15px] font-semibold hover:bg-pe-gray-50 hover:text-pe-navy transition-all group"
+                          >
+                            <span className="w-8 h-8 rounded-xl bg-pe-orange-light flex items-center justify-center text-pe-orange text-sm flex-shrink-0 group-hover:bg-pe-orange group-hover:text-white transition-all">
+                              🔋
+                            </span>
+                            {item.label}
+                          </Link>
+                        ))}
+                      </div>
+                      <div>
+                        <p className="text-[11px] font-extrabold uppercase tracking-[0.2em] text-[#29ABE2] mb-4.5 flex items-center gap-2">
+                          By Brand
+                          <span className="flex-1 h-px bg-pe-gray-200" />
+                        </p>
+                        {batteriesMenu.brands.map((item) => (
+                          <Link
+                            key={item.href}
+                            href={item.href}
+                            className="flex items-center gap-3 px-3 py-2.5 rounded-lg text-pe-gray-600 text-[15px] font-semibold hover:bg-pe-gray-50 hover:text-pe-navy transition-all group"
+                          >
+                            <span className="w-2 h-2 rounded-full bg-[#29ABE2]/30 group-hover:bg-[#29ABE2] transition-colors" />
+                            {item.label}
+                          </Link>
+                        ))}
+                      </div>
+                    </div>
+                  </div>
+                </div>
+
+                <Link
+                  href="/products"
+                  className="px-3 xl:px-4 py-2 text-[20px] xl:text-[23px] font-bold text-pe-gray-700 hover:text-pe-navy rounded-lg hover:bg-pe-gray-50 transition-all whitespace-nowrap"
+                >
+                  Products
+                </Link>
+
+                <Link
+                  href="/rebate-checker"
+                  className="px-3 xl:px-4 py-2 text-[20px] xl:text-[23px] font-bold text-pe-gray-700 hover:text-pe-navy rounded-lg hover:bg-pe-gray-50 transition-all whitespace-nowrap"
+                >
+                  Rebate Checker
+                </Link>
+
+                <Link
+                  href="/special-offers"
+                  className="px-3 xl:px-4 py-2 text-[20px] xl:text-[23px] font-bold text-pe-cyan hover:text-white hover:bg-pe-cyan rounded-lg transition-all flex items-center gap-1 whitespace-nowrap"
+                >
+                  Special Offers
+                </Link>
+              </nav>
+
+              {/* CTA + MOBILE TOGGLE */}
+              <div className="flex items-center gap-3">
+                <Link 
+                  href="/get-quote" 
+                  className="bg-[#002B5C] hover:bg-[#001F42] text-white font-bold py-2.5 px-6 rounded-lg shadow-sm hover:shadow transition-all text-sm flex items-center gap-2 whitespace-nowrap hidden sm:flex"
+                >
+                  Get A Quote →
+                </Link>
+                <button
+                  onClick={() => setMobileOpen(true)}
+                  className="lg:hidden p-2 rounded-lg text-pe-gray-700 hover:bg-pe-gray-100 transition-colors"
+                  aria-label="Open menu"
+                >
+                  <Menu size={22} />
+                </button>
+              </div>
+
+            </div>
+          </div>
+
         </div>
       </header>
 
